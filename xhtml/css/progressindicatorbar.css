@@ -4,6 +4,7 @@
   justify-content: space-between;
   margin-bottom: 20px;
   overflow-x: auto;
+  min-width: 100px;
 }
 
 .stepper-item {
