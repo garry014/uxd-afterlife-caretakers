@@ -347,6 +347,16 @@
 											<span style="font-weight:bold">Religious Place Name*:</span> <input name="placeName" type="text" required class="form-control" placeholder="Religious Place Name">
 											<span style="font-weight:bold">Religious Place Contact Number*:</span> <input name="placeName" type="text" required class="form-control" placeholder="Religious Place Contact Number" pattern="[0-9]" type="number">
 										</div>
+										<script>
+											if (typeof(Storage) !== "undefined") {
+											  // Store
+											  localStorage.setItem("lastname", "Smith");
+											  // Retrieve
+											  document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+											} else {
+											  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+											}
+										</script>
 									</div>
 									<script>
 										function showRites()
