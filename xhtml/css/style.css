@@ -12381,7 +12381,7 @@ label.error {
     transform: translate(-50%, -50%); }
   @media only screen and (max-width: 1680px) {
     .main-banner {
-      height: 700px; }
+      height: 600px; }
       .main-banner .banner-img {
         margin-right: 0;
         margin-left: 0px; }
@@ -14495,7 +14495,7 @@ blockquote {
   margin-left: 0;
   margin-right: 0;
   width: 200px;
-  height: 105px;
+  height: 75px;
   position: relative;
   z-index: 9; }
   .menu-logo a {
@@ -14509,14 +14509,14 @@ blockquote {
     letter-spacing: 20px; }
   @media only screen and (max-width: 991px) {
     .menu-logo {
-      height: 85px; } }
+      height: 75px; } }
   @media only screen and (max-width: 767px) {
     .menu-logo {
       width: 180px; } }
   @media only screen and (max-width: 575px) {
     .menu-logo {
       height: 75px;
-      width: 150px; } }
+      width: 130px; } }
 
 .header {
   position: relative;
@@ -14529,7 +14529,7 @@ blockquote {
     position: relative; }
   .header .secondary-menu {
     float: right;
-    height: 105px;
+    height: 75px;
     display: flex;
     align-items: center;
     position: relative;
@@ -14654,7 +14654,9 @@ blockquote {
   background: #fff; }
 
 .menu-links {
-  padding: 0; }
+  padding: 0;
+  height:75px;
+}
   @media only screen and (max-width: 991px) {
     .menu-links.show {
       left: -1px;
