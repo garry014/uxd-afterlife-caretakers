@@ -33,7 +33,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
 	
 	<!-- PAGE TITLE HERE ============================================= -->
-	<title>MediTro - Doctor, Medical & Healthcare HTML Template</title>
+	<title>Funeral Plans - Wake/Funeral Planning</title>
 	
 	<!-- MOBILE SPECIFIC ============================================= -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,12 +42,62 @@
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap-select/css/bootstrap-select.min.css">
 	<link rel="stylesheet" href="vendor/swiper/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/progressindicatorbar.css">
 	
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	
+	<style>
+	
+/* HIDE RADIO */
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+  outline: 5px solid #f4925a;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+
+.checkboxes label {
+    font-size: 17px;
+}
+
+.textImgContainer {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.textImgContainer img {vertical-align: middle;}
+
+.textImgContainer .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  font-size: 18px;
+}
+	</style>
 </head>
 <body>
 <div class="page-wraper">
@@ -156,12 +206,12 @@
 			<div class="page-banner banner-lg contact-banner" style="background-image:url(images/banner/img1.jpg);">
 				<div class="container">
 					<div class="page-banner-entry text-center">
-						<h1>Catalouge</h1>
+						<h1>Pre-Funeral Planning</h1>
 						<!-- Breadcrumb row -->
 						<nav aria-label="breadcrumb" class="breadcrumb-row">
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Home</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Catalouge</li>
+								<li class="breadcrumb-item active" aria-current="page">Pre-Funeral Planning</li>
 							</ul>
 						</nav>
 					</div>
@@ -175,50 +225,130 @@
 		<section class="">
 			<div class="container">
 				<div class="contact-wraper">
-					<div class="row">
+					
 						<div class="col-lg-12 mb-30">
-							<table class="table table-striped">
-							  <thead>
-								<tr>
-								  <th scope="col">ID</th>
-								  <th scope="col">Name</th>
-								  <th scope="col">Image</th>
-								  <th scope="col">Price</th>
-								  <th scope="col">Delete</th>
-								</tr>
-							  </thead>
-							  <tbody>
-								<tr>
-								  <th scope="row">1</th>
-								  <td>Half glass white casket</td>
-								  <td><img src="images/funeral/catalouge/grace-white.png" alt="Girl in a jacket" width="200" height="auto"></td>
-								  <td>$899</td>
-								  <td><button type="button" class="btn btn-danger">Delete</button></td>
-								</tr>
-								<tr>
-								  <th scope="row">2</th>
-								  <td>Light Brown casket</td>
-								  <td><img src="images/funeral/catalouge/dark-brown.png" alt="Girl in a jacket" width="200" height="auto"></td>
-								  <td>$650</td>
-								  <td><button type="button" class="btn btn-danger">Delete</button></td>
-								</tr>
-								<tr>
-								  <th scope="row">3</th>
-								  <td>Dark Brown casket</td>
-								  <td><img src="images/funeral/catalouge/light-brown.png" alt="Girl in a jacket" width="200" height="auto"></td>
-								  <td>780</td>
-								  <td><button type="button" class="btn btn-danger">Delete</button></td>
-								</tr>
-							  </tbody>
-							</table>
+							<form class="form-wraper contact-form ajax-form" action="script/contact.php">
+								<div class="ajax-message"></div>
+								
+								<div class="stepper-wrapper">
+									  <div class="stepper-item completed">
+										<div class="step-counter">1</div>
+										<div class="step-name"><a href="religion.html">Religion</a></div>
+									  </div>
+									  <div class="stepper-item completed">
+										<div class="step-counter">2</div>
+										<div class="step-name"><a href="wake-location.html">Wake <br>Location</a></div>
+									  </div>
+									  <div class="stepper-item completed">
+										<div class="step-counter">3</div>
+										<div class="step-name"><a href="wake-plans.html">Wake <br>Plans</a></div>
+									  </div>
+									  <div class="stepper-item completed">
+										<div class="step-counter">4</div>
+										<div class="step-name"><a href="wake-addons.html">Wake <br>Add-ons</a></div>
+									  </div>
+									  <div class="stepper-item active">
+										<div class="step-counter">5</div>
+										<div class="step-name">Funeral <br>Plans</div>
+									  </div>
+									  <div class="stepper-item">
+										<div class="step-counter">6</div>
+										<div class="step-name">Final Resting<br>Place</div>
+									  </div>
+									  <div class="stepper-item">
+										<div class="step-counter">7</div>
+										<div class="step-name">Plan<br>Executor(s)</div>
+									  </div>
+									  <div class="stepper-item">
+										<div class="step-counter">8</div>
+										<div class="step-name">Confirmation<br>& Payment</div>
+									  </div>
+								</div>
+								<h5><u>What is a Funeral?</u></h5> A funeral is a ceremony connected with the final disposition of a corpse, such as a burial or cremation.<br><br>
+								<h5>Funeral Transportation Vehicle (driver inclusive):*</h5>
+								*Required to fill in or select.<br><br>
+								<div class="row">
+									<div class="form-group col-md-4">
+										<label>
+										<div class="textImgContainer">
+										  <input type="radio" name="test" value="van-hearse" checked>
+										  <img src="images/funeral/van-hearse.png">
+										  <div class="content">Van Hearse (+$95)</div>
+										</div>
+										</label>
+									</div>
+									<div class="form-group col-md-4">
+										<label>
+										<div class="textImgContainer">
+										  <input type="radio" name="test" value="limousine-hearse">
+										  <img src="images/funeral/limousine-hearse.png">
+										  <div class="content">Limousine Hearse (+$225)</div>
+										</div>
+										</label>
+									</div>
+									<div class="form-group col-md-4">
+										<label>
+										<div class="textImgContainer">
+										  <input type="radio" name="test" value="float-hearse">
+										  <img src="images/funeral/float-hearse.png">
+										  <div class="content">Float Hearse (+$550)</div>
+										</div>
+										</label>
+									</div>
+									
+									<div class="form-group col-md-12" id="showRites">
+										<h5>Funeral Plan</h5>
+										These services are <span style="font-weight:bold">OPTIONAL</span>. Check the boxes next to it if ONLY you <span style="font-weight:bold">require</span> the service.
+									</div>
+									<div class="form-group col-md-12" id="riteSettings">
+										<input type="checkbox" id="cermony" name="cermony" value="cermony">
+										<label for="cermony" style="font-size: medium; display: inline"> <span style="color:#565ace">[RECOMMENDED]</span> Funeral Ceremony & Public Viewing (+$350)</label><br>
+										<input type="checkbox" id="bus" name="bus" value="bus">
+										<label for="bus" style="font-size: medium; display: inline" id="busLabel"> <span style="color:#565ace">[RECOMMENDED]</span> Bus for visitors (+$200)</label><br>
+										<input type="checkbox" id="memorialservice" name="memorialservice" value="memorialservice">
+										<label for="memorialservice" style="font-size: medium; display: inline" id="memorialserviceLabel"> Memorial Service (+$150)</label>
+									</div>
+									<div class="form-group col-md-4">
+										<span style="font-weight:bold">Guests expected on the day*:</span>
+									</div>
+									<div class="form-group col-md-4">
+										<select class="form-select" id="guests">
+											<option selected></option>
+											<option value="1">0-50</option>
+											<option value="2">51-100</option>
+											<option value="3">100-200</option>
+											<option value="4">>200</option>
+										</select>
+									</div>
+									<div class="col-lg-4">
+										<!-- Intentionally left blank -->
+									</div>
+									
+									<div class="col-lg-6">
+										<!-- Intentionally left blank -->
+									</div>
+									<script src="./js/setvars.js"></script>
+									<script>
+									setrbl('funeralVechicle','test');
+									setcb('hasFuneralCermony', 'cermony');
+									setcb('hasBusCatering', 'bus');
+									setddl('fGuestsExpected', 'guests');
+									</script>
+									
+									<div class="form-group col-md-3">
+										<button name="back" type="back" value="Back" class="btn w-100 btn-secondary btn-lg" style="background-color: #e0ded7; color: black" onclick="location.href = 'wake-addons.html';">Previous</button>
+									</div>
+									<div class="col-lg-3">
+										<button name="submit" type="submit" value="Submit" class="btn w-100 btn-secondary btn-lg" onclick="location.href = 'resting-place.html';">Save & Next</button>
+									</div>
+								</div>
+							</form>
 						</div>
 						
-					</div>
+
 				</div>
 			</div>
 		</section>
-		
-		
 		
 	</div>
 	

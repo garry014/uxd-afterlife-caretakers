@@ -33,7 +33,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
 	
 	<!-- PAGE TITLE HERE ============================================= -->
-	<title>MediTro - Doctor, Medical & Healthcare HTML Template</title>
+	<title>Religion - Wake/Funeral Planning</title>
 	
 	<!-- MOBILE SPECIFIC ============================================= -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,6 +42,7 @@
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap-select/css/bootstrap-select.min.css">
 	<link rel="stylesheet" href="vendor/swiper/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/progressindicatorbar.css">
 	
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,85 +51,6 @@
 	
 	<style>
 	
-  .stepper-wrapper {
-  margin-top: auto;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-.stepper-item {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-
-  @media (max-width: 768px) {
-    font-size: 12px;
-  }
-}
-
-.stepper-item::before {
-  position: absolute;
-  content: "";
-  border-bottom: 2px solid #ccc;
-  width: 100%;
-  top: 20px;
-  left: -50%;
-  z-index: 2;
-}
-
-.stepper-item::after {
-  position: absolute;
-  content: "";
-  border-bottom: 2px solid #ccc;
-  width: 100%;
-  top: 20px;
-  left: 50%;
-  z-index: 2;
-}
-
-.stepper-item .step-counter {
-  position: relative;
-  z-index: 5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #ccc;
-  margin-bottom: 6px;
-}
-
-.stepper-item.active {
-  font-weight: bold;
-}
-
-.stepper-item.completed .step-counter {
-  background-color: #4bb543;
-}
-
-.stepper-item.completed::after {
-  position: absolute;
-  content: "";
-  border-bottom: 2px solid #4bb543;
-  width: 100%;
-  top: 20px;
-  left: 50%;
-  z-index: 3;
-}
-
-.stepper-item:first-child::before {
-  content: none;
-}
-.stepper-item:last-child::after {
-  content: none;
-}
-
-.step-name{
-	text-align: center;
-}
 /* HIDE RADIO */
 [type=radio] { 
   position: absolute;
@@ -144,7 +66,36 @@
 
 /* CHECKED STYLES */
 [type=radio]:checked + img {
-  outline: 5px solid #008000;
+  outline: 5px solid #f4925a;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+
+.checkboxes label {
+    font-size: 17px;
+}
+
+.textImgContainer {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.textImgContainer img {vertical-align: middle;}
+
+.textImgContainer .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  font-size: 18px;
 }
 	</style>
 </head>
@@ -255,12 +206,12 @@
 			<div class="page-banner banner-lg contact-banner" style="background-image:url(images/banner/img1.jpg);">
 				<div class="container">
 					<div class="page-banner-entry text-center">
-						<h1>Contact Us</h1>
+						<h1>Pre-Funeral Planning</h1>
 						<!-- Breadcrumb row -->
 						<nav aria-label="breadcrumb" class="breadcrumb-row">
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Home</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+								<li class="breadcrumb-item active" aria-current="page">Pre-Funeral Planning</li>
 							</ul>
 						</nav>
 					</div>
@@ -274,12 +225,12 @@
 		<section class="">
 			<div class="container">
 				<div class="contact-wraper">
-					<div class="row">
+					
 						<div class="col-lg-12 mb-30">
 							<form class="form-wraper contact-form ajax-form" action="script/contact.php">
 								<div class="ajax-message"></div>
 								
-								  <div class="stepper-wrapper">
+								<div class="stepper-wrapper">
 									  <div class="stepper-item active">
 										<div class="step-counter">1</div>
 										<div class="step-name">Religion</div>
@@ -296,69 +247,98 @@
 										<div class="step-counter">4</div>
 										<div class="step-name">Wake <br>Add-ons</div>
 									  </div>
-									  
+									  <div class="stepper-item">
+										<div class="step-counter">5</div>
+										<div class="step-name">Funeral <br>Plans</div>
+									  </div>
+									  <div class="stepper-item">
+										<div class="step-counter">6</div>
+										<div class="step-name">Final Resting<br>Place</div>
+									  </div>
+									  <div class="stepper-item">
+										<div class="step-counter">7</div>
+										<div class="step-name">Plan<br>Executor(s)</div>
+									  </div>
+									  <div class="stepper-item">
+										<div class="step-counter">8</div>
+										<div class="step-name">Confirmation<br>& Payment</div>
+									  </div>
 								</div>
 								<h5>Select Religion:*</h5>
 								*Required to fill in or select.<br><br>
 								<div class="row">
 									<div class="form-group col-md-4">
 										<label>
-										  <input type="radio" name="test" value="small" checked>
-										  <img src="images/funeral/buddhist.png">
+										<div class="textImgContainer">
+										  <input type="radio" id="rbl" name="test" value="buddhist" onchange="religionChange('buddhist');">
+										  <img src="images/funeral/buddhist.png" alt="Buddhist">
+										  <div class="content">Buddhist</div>
+										</div>
 										</label>
 									</div>
 									<div class="form-group col-md-4">
 										<label>
-										  <input type="radio" name="test" value="small">
-										  <img src="images/funeral/christian.png">
+										<div class="textImgContainer">
+										  <input type="radio" id="rbl" name="test" value="christian" onchange="religionChange('christian');">
+										  <img src="images/funeral/christian.png" alt="Christian">
+										  <div class="content">Christian</div>
+										</div>
 										</label>
 									</div>
 									<div class="form-group col-md-4">
 										<label>
-										  <input type="radio" name="test" value="small">
-										  <img src="images/funeral/taoist.png">
+										<div class="textImgContainer">
+										  <input type="radio" id="rbl" name="test" value="taoist" onchange="religionChange('taoist');">
+										  <img src="images/funeral/taoist.png" alt="Taoist">
+										  <div class="content">Taoist</div>
+										</div>
 										</label>
 									</div>
 									<div class="form-group col-md-4">
 										<label>
-										  <input type="radio" name="test" value="small">
-										  <img src="images/funeral/catholic.png">
+										<div class="textImgContainer">
+										  <input type="radio" id="rbl" name="test" value="catholic" onchange="religionChange('catholic');">
+										  <img src="images/funeral/catholic.png" alt="Catholic">
+										  <div class="content">Catholic</div>
+										</div>
 										</label>
 									</div>
 									<div class="form-group col-md-4">
 										<label>
-										  <input type="radio" name="test" value="small">
-										  <img src="images/funeral/free-thinker.png">
+										<div class="textImgContainer">
+										  <input type="radio" id="rbl" name="test" value="free-thinker" onchange="religionChange('free-thinker');">
+										  <img src="images/funeral/free-thinker.png" alt="Free-Thinker">
+										  <div class="content">Free-Thinker</div>
+										</div>
 										</label>
 									</div>
-									<div class="form-group col-md-12">
-										<input type="checkbox" id="rite" name="rite" value="rite" onclick="showRites();">
-										<label for="rite" style="font-size: medium"> Require religious rites?</label>
+									<div class="form-group col-md-12" id="showRites" style="display: none;">
+										<input type="checkbox" id="rite" name="rite" value="rite" onclick="showRites();" >
+										<label for="rite" style="font-size: medium; display: inline" id="riteLabel"> Require religious rites?</label>
 									</div>
 									<div class="form-group col-md-12" id="riteSettings" style="display: none;">
 										<span style="font-weight:bold">How do you wish we will conduct your religious rite?*</span>
 										<select class="form-select" onchange="riteChange()" id="riteOptions">
-											<option selected></option>
+											<option value="" selected></option>
 											<option value="personal">Contact my religious place^ (eg: my temple/church)</option>
-											<option value="planout">Plan it out for me</option>
+											<option value="planout">Plan it out for me (+$250 per day)</option>
 										</select>
 										<sup>^subjective to religious's place's fees/donations required, additional fees will be posted to the executor.</sup>
 										<div id="placeDetails" style="display: none;">
-											<span style="font-weight:bold">Religious Place Name*:</span> <input name="placeName" type="text" required class="form-control" placeholder="Religious Place Name">
-											<span style="font-weight:bold">Religious Place Contact Number*:</span> <input name="placeName" type="text" required class="form-control" placeholder="Religious Place Contact Number" pattern="[0-9]" type="number">
+											<span style="font-weight:bold">Religious Place Name*:</span>
+											<input list="religiousNameList" name="religiousName" id="religiousName" class="form-control" placeholder="Choose from list or type into the box if name cannot be found." required/>
+											<datalist id="religiousNameList">
+											  <option value="Lin San Temple">
+											  <option value="Buddha Tooth Relic Temple">
+											  <option value="Kong Meng San Phor Kark See Monastery">
+											  <option value="Hai Inn Temple">
+											  <option value="Buddha Tooth Relic Temple">
+											</datalist>
+											Point of Contact Name: <input id="ritePOCName" name="ritePOCName" type="text" required class="form-control">
+											Point of Contact Number (without country code):  <input id="ritePOCNumber" name="ritePOCNumber" type="text" required class="form-control" pattern="[0-9]" type="number">
 										</div>
-										<div id="result"></div>
-										<script>
-											if (typeof(Storage) !== "undefined") {
-											  // Store
-											  localStorage.setItem("lastname", "Smith");
-											  // Retrieve
-											  document.getElementById("result").innerHTML = localStorage.getItem("lastname");
-											} else {
-											  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
-											}
-										</script>
 									</div>
+									<script src="./js/setvars.js"></script>
 									<script>
 										function showRites()
 										{
@@ -381,19 +361,97 @@
 											document.getElementById('placeDetails').style.display = 'none';
 										  }
 										}
+										
+										function religionChange(src){
+											var christian = ['Inspire Church Singapore','Tai Seng Christian Church', 'Central Christian Church', 'Kim Tian Christian Church', 'Grace (SCC) Church', 'Community For Christ Church', 'Singapore Christian Canaan Church', 'Bartley Christian Church', 'PENTECOSTAL MISSIONARY CHURCH OF CHRIST Singapore', 'Assemblies of God Church - Church of Christ the Rock','Renewal Christian Church', 'Singapore Christian Fellowship Ltd', 'Trinity Christian Centre', 'New Life Christian Church', 'Christ Commission Fellowship Singapore (CCF Singapore)', 'Bethany Christian Centre','Mount Calvary Baptist Church', 'River Glory Church Ltd', 'Newton Life Church'];
+											var catholic = ['Inspire Church Singapore', 'Church of St. Francis Xavier', 'Church of the Holy Spirit', 'Our Lady of Lourdes Church', 'Church of Saints Peter & Paul', 'Church of St. Stephen', 'Church of the Sacred Heart', 'Church of The Immaculate Heart of Mary', 'Church of Christ the King', 'St Joseph Church (Victoria Street)', 'Church of St. Vincent de Paul', 'Church of St Teresa', 'Cathedral of the Good Shepherd', 'Church of St Michael', 'Church of the Holy Family', 'St. Joseph Church', 'Church of Saint Alphonsus', 'St Mary of the Angels', 'St Anne Church', 'Church of the Transfiguration', 'Church of Our Lady Queen of Peace'];
+											var buddhist = ['Lin San Temple', 'Buddha Tooth Relic Temple', 'Kong Meng San Phor Kark See Monastery', 'Hai Inn Temple', 'Buddha Tooth Relic Temple'];
+											var taoist = ['Tiong Bahru Qi Tian Gong Temple', 'Thian Hock Keng Temple', 'Tou Mu Kung Temple', 'Dou Tian Gong Temple', 'Chee Tong Temple', 'Yueh Hai Ching Temple', 'Chu Sheng Temple', 'Siang Cho Keong Temple', 'Tien Sen Tua Temple', 'Chong Tuck Tong Chineese Temple'];
+											var list = document.getElementById('religiousNameList');
+											$("#religiousNameList").empty();
+											document.getElementById('showRites').style.display = 'block';
+											
+											
+											if(src == "buddhist"){
+												
+												buddhist.forEach(function(item){
+												   var option = document.createElement('option');
+												   option.value = item;
+												   list.appendChild(option);
+												});
+											}
+											else if (src == "christian"){
+												christian.forEach(function(item){
+												   var option = document.createElement('option');
+												   option.value = item;
+												   list.appendChild(option);
+												});
+											}
+											else if (src == "catholic"){
+												catholic.forEach(function(item){
+												   var option = document.createElement('option');
+												   option.value = item;
+												   list.appendChild(option);
+												});
+											}
+											else if (src == "taoist"){
+												taoist.forEach(function(item){
+												   var option = document.createElement('option');
+												   option.value = item;
+												   list.appendChild(option);
+												});
+											}
+											else {
+												document.getElementById("rite").checked = false;
+												showRites();
+												document.getElementById('showRites').style.display = 'none';
+											}
+											
+											
+										}	
+										
+										function saveNext() {
+											if (typeof(Storage) !== "undefined") {
+											  // Store
+											  localStorage.setItem("religion", document.querySelector('input[name="test"]:checked').value);
+											  localStorage.setItem("requireRites", document.getElementById('rite').checked);
+											  localStorage.setItem("riteType", document.getElementById("riteOptions").value);
+											  localStorage.setItem("religiousPlaceName", document.getElementById("religiousName").value);
+											  localStorage.setItem("ritePOCName", document.getElementById("ritePOCName").value);
+											  localStorage.setItem("ritePOCNumber", document.getElementById("ritePOCNumber").value);
+											  location.href = 'wake-location.html';
+											} else {
+											  alert("Sorry, your browser does not support Web Storage, hence there will be limited features.");
+											}
+										}
+										
+										// On init
+										//setrbl('religion', 'test');
+										setrbl('religion','test');
+										setcb('requireRites', 'rite');
+										setddl('riteType', 'riteOptions');
+										setddl('religiousPlaceName', 'religiousName');
+										setddl('ritePOCName', 'ritePOCName');
+										setddl('ritePOCNumber', 'ritePOCNumber');
+										showRites();
+										riteChange();
+										
+										
 									</script>
 									
-									<!-- Intentionally left blank -->
+									
+									
 									<div class="col-lg-9">
+										<!-- Intentionally left blank -->
 									</div>
 									<div class="col-lg-3">
-										<button name="submit" type="submit" value="Submit" class="btn w-100 btn-secondary btn-lg">Next</button>
+										<button name="submit" type="submit" value="Submit" class="btn w-100 btn-secondary btn-lg" onclick="saveNext()">Save & Next</button>
 									</div>
 								</div>
 							</form>
 						</div>
 						
-					</div>
+
 				</div>
 			</div>
 		</section>

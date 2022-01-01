@@ -33,7 +33,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
 	
 	<!-- PAGE TITLE HERE ============================================= -->
-	<title>Wake Add-ons - Wake/Funeral Planning</title>
+	<title>Final Resting Place - Wake/Funeral Planning</title>
 	
 	<!-- MOBILE SPECIFIC ============================================= -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,7 +50,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	
 	<style>
-
+	
 /* HIDE RADIO */
 [type=radio] { 
   position: absolute;
@@ -77,6 +77,27 @@ input[type=checkbox] {
     font-size: 17px;
 }
 
+
+.textImgContainer {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.textImgContainer img {vertical-align: middle;}
+
+.textImgContainer .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  font-size: 16px;
+}
 	</style>
 </head>
 <body>
@@ -205,7 +226,7 @@ input[type=checkbox] {
 		<section class="">
 			<div class="container">
 				<div class="contact-wraper">
-					<div class="row">
+					
 						<div class="col-lg-12 mb-30">
 							<form class="form-wraper contact-form ajax-form" action="script/contact.php">
 								<div class="ajax-message"></div>
@@ -223,15 +244,15 @@ input[type=checkbox] {
 										<div class="step-counter">3</div>
 										<div class="step-name"><a href="wake-plans.html">Wake <br>Plans</a></div>
 									  </div>
-									  <div class="stepper-item active">
+									  <div class="stepper-item completed">
 										<div class="step-counter">4</div>
-										<div class="step-name">Wake <br>Add-ons</div>
+										<div class="step-name"><a href="wake-addons.html">Wake <br>Add-ons</a></div>
 									  </div>
-									  <div class="stepper-item">
+									  <div class="stepper-item completed">
 										<div class="step-counter">5</div>
-										<div class="step-name">Funeral <br>Plans</div>
+										<div class="step-name"><a href="funeral-plans.html">Funeral <br>Plans</a></div>
 									  </div>
-									  <div class="stepper-item">
+									  <div class="stepper-item active">
 										<div class="step-counter">6</div>
 										<div class="step-name">Final Resting<br>Place</div>
 									  </div>
@@ -244,103 +265,276 @@ input[type=checkbox] {
 										<div class="step-name">Confirmation<br>& Payment</div>
 									  </div>
 								</div>
-								<h5><u>Add-ons</u></h5>
-								<p>These services are <span style="font-weight:bold">OPTIONAL</span>. Check the boxes next to it if ONLY you <span style="font-weight:bold">require</span> the service.</p>
+								<h5>Select your final resting place:*</h5>
+								*Required to fill in or select.<br><br>
 								<div class="row">
-									<label><span style="font-weight:bold">Highly Recommended: </span></label><br>
-									<div class="form-group col-md-3">
-										<input type="checkbox" id="makeup" name="makeup" value="makeup">
-										<label for="makeup"> Make-up Services (+$50)</label>
-									</div>
-									<div class="form-group col-md-3">
-										<input type="checkbox" id="hairstyling" name="hairstyling" value="hairstyling">
-										<label for="hairstyling"> Hairstyling Services (+$35)</label>
-									</div>
-									<div class="form-group col-md-3">
-										<input type="checkbox" id="mobileToilet" name="mobileToilet" value="mobileToilet">
-										<label for="mobileToilet"> Mobile Toilet (+$100 per day)</label>
-									</div>
-									<div class="form-group col-md-3">
-										<!-- Intentionally left blank -->
+									<div class="col-lg-12" id="cremation" style="display: none;">
+										<span style="color:red;">Note: Cemetery Burial period is limited to 15 years only. After that, the remains have to be cremated or re-interred, at additional fees.</span>
 									</div>
 									
-									
-									<label><span style="font-weight:bold">Good to have: </span></label><br>
-									<div class="form-group col-md-3">
-										<input type="checkbox" id="beverages" name="beverages" value="beverages">
-										<label for="beverages"> Beverages (+$35 per day)</label>
+									<div class="form-group col-md-4">
+										<label>
+										<div class="textImgContainer">
+										  <input type="radio" name="test" value="gov-columbarium" onchange="burialChange('gov');">
+										  <img src="images/funeral/gov-columbarium.png" alt="gov-columbarium">
+										  <div class="content">Government Columbarium - Cremation, Urn, Plaque & Niche inclusive (+$2,550)</div>
+										</label>
 									</div>
-									<div class="form-group col-md-3">
-										<input type="checkbox" id="titbits" name="titbits" value="titbits">
-										<label for="titbits"> Titbits (+$20 per day)</label>
 									</div>
-									<div class="form-group col-md-3">
-										<input type="checkbox" id="fridge" name="fridge" value="fridge">
-										<label for="fridge"> Fridge (+$100 per day)</label>
+									<div class="form-group col-md-4">
+										<label>
+										<div class="textImgContainer">
+										  <input type="radio" name="test" value="cemetery" onchange="burialChange('cemetery');">
+										  <img src="images/funeral/cemetery.png" alt="cemetery">
+										  <div class="content">Chua Chao Kang Cemetery - Plaque & Space inclusive (+$2,440)</div>
+										</div>
+										</label>
 									</div>
-									<div class="form-group col-md-3">
+									<div class="form-group col-md-4">
+										<label>
+										<div class="textImgContainer">
+										  <input type="radio" name="test" value="sea-burial" onchange="burialChange('sea');">
+										  <img src="images/funeral/sea-burial.png" alt="sea-burial">
+										  <div class="content">Sea Burial - Yacht inclusive (+$500)</div>
+										</label>
+										</div>
+									</div>
+									<div class="form-group col-md-4">
+										<label>
+										<div class="textImgContainer">
+										  <input type="radio" name="test" value="religious" onchange="burialChange('religious');">
+										  <img src="images/funeral/religious.png" alt="religious">
+										  <div class="content">Religious Institution Columbarium - Cremation, Urn, Plaque & Niche inclusive (+$3,150)</div>
+										</label>
+										</div>
+									</div>
+									<div class="form-group col-md-4">
+										<label>
+										<div class="textImgContainer">
+										  <input type="radio" name="test" value="in-land" onchange="burialChange('inland');">
+										  <img src="images/funeral/in-land.png" alt="in-land">
+										  <div class="content">Inland Ash Scattering Facility - Cremation & Niche inclusive (+$450)</div>
+										</label>
+										</div>
+									</div>
+									<div class="form-group col-md-4">
 										<!-- Intentionally left blank -->
 									</div>
-									
-									<div class="form-group col-md-3">
-										<label><span style="font-weight:bold">Catering: (for 30 pax)	</span></label><br>
-									</div>
-									<div class="form-group col-md-3">
-										<input type="checkbox" id="lunch" name="lunch" value="lunch">
-										<label for="lunch"> Lunch (+$100 per day)</label>
-									</div>
-									<div class="form-group col-md-3">
-										<input type="checkbox" id="dinner" name="dinner" value="dinner">
-										<label for="dinner"> Dinner (+$150 per day)</label>
-									</div>
-									<div class="form-group col-md-3">
-										<!-- Intentionally left blank -->
+				
+									<div class="form-group col-md-12" style="display:none;" id="religiousCremation">
+										<h5>Select Columbarium:*</h5>
+										<select class="form-select" id="religiousNameList" required>
+											<option selected>Select Columbarium</option>
+										</select>
 									</div>
 									
+									<hr name="plaque" style="display:none;">
+									<h5 name="plaque" style="display:none;">Plaque Printing</h5>
+									<div class="form-group col-md-3" name="plaque" style="display:none;">
+										<span style="font-weight:bold">Photo:*</span><br>
+									</div>
+									<div class="form-group col-md-9" name="plaque" style="display:none;">
+										<input type="checkbox" id="useFramePhoto" name="useFramePhoto" value="useFramePhoto" onchange="onFramePhotoCBChange();" checked>
+										<label for="useFramePhoto"> Use wake frame photo</label><br>
+										<input type="file" id="myFile" name="filename" style="display:none;">
+									</div>
+									<div class="form-group col-md-3" name="plaque" style="display:none;">
+										<span style="font-weight:bold">Name to be printed:*</span><br>
+									</div>
+									<div class="form-group col-md-4" name="plaque" style="display:none;">
+										<input name="name" type="text" required class="form-control" placeholder="Best to have full name printed.">
+									</div>
+									<div class="form-group col-md-5" name="plaque" style="display:none;">
+										<!--Intentionally left blank-->
+									</div>
+									<div class="form-group col-md-3" name="plaque" style="display:none;">
+										<span style="font-weight:bold">Date(s) to be printed :</span><br>
+									</div>
+									<div class="form-group col-md-3" name="plaque" style="display:none;">
+										<input type="checkbox" id="birthDate" name="birthDate" value="birthDate">
+										<label for="birthDate"> Print Birth Date</label><br>
+									</div>
+									<div class="form-group col-md-3" name="plaque" style="display:none;">
+										<input type="checkbox" id="departedDate" name="departedDate" value="departedDate">
+										<label for="departedDate"> Print Departed Date</label>
+									</div>
+									<div class="form-group col-md-3" name="plaque" style="display:none;">
+										<!--Intentionally left blank-->
+									</div>
+									<div class="form-group col-md-3" name="plaque" style="display:none;">
+										<span style="font-weight:bold">Scriptures/Quotes:</span><br>
+									</div>
+									<div class="form-group col-md-9" name="plaque" style="display:none;">
+										<textarea name="plaquequote" id="plaquequote" rows="4" cols="50" class="form-control"></textarea>
+										<span style=" float:right;">Maximum characters: <span id="dcount">0</span>/170 <span id="maxCountReached" style="color:red; display: none;">(Max characters reached!)</span></span>
+									</div>
 									
-									<label><span style="font-weight:bold">Others: </span></label><br>
-									<div class="form-group col-md-3">
-										<input type="checkbox" id="book" name="book" value="book">
-										<label for="book"> Register Book (+$20)</label>
+									<hr name="urnDiv" style="display:none;">
+									<h5 name="urnDiv" style="display:none;">Urn Selection:*</h5>
+									<div class="form-group col-md-4" name="urnDiv" style="display:none;">
+										<label>
+										<div class="textImgContainer">
+										  <input type="radio" name="urnrbl" value="dark-blue-urn" checked>
+										  <img src="images/funeral/dark-blue-urn.png">
+										  <div class="content">Dark Blue Urn</div>
+										</div>
+										</label>
 									</div>
-									<div class="form-group col-md-3">
-										<input type="checkbox" id="folders" name="folders" value="folders">
-										<label for="folders"> Memorial Folders (+$80)</label>
+									<div class="form-group col-md-4" name="urnDiv" style="display:none;">
+										<label>
+										<div class="textImgContainer">
+										  <input type="radio" name="urnrbl" value="white-urn">
+										  <img src="images/funeral/white-urn.png">
+										  <div class="content">White Urn</div>
+										</div>
+										</label>
 									</div>
-									<div class="form-group col-md-3">
-										<!-- Intentionally left blank -->
-									</div>
-									<div class="form-group col-md-3">
-										<!-- Intentionally left blank -->
-									</div>
-									
-									<div class="form-group col-md-6">
-										<!-- Intentionally left blank -->
+									<div class="form-group col-md-4" name="urnDiv" style="display:none;">
+										<label>
+										<div class="textImgContainer">
+										  <input type="radio" name="urnrbl" value="black-christian-urn">
+										  <img src="images/funeral/black-christian-urn.png">
+										  <div class="content">Black (Christian) Urn</div>
+										</div>
+										</label>
 									</div>
 									
 									<script src="./js/setvars.js"></script>
 									<script>
-									setcb('hasMakeupServices', 'makeup');
-									setcb('hasHairstylingServices', 'hairstyling');
-									setcb('hasMobileToilet', 'mobileToilet');
+										var myFile = document.getElementById("myFile");
+										function onFramePhotoCBChange(){
+											if (document.getElementById("useFramePhoto").checked){
+												myFile.style.display = 'none';
+											}
+											else {
+												myFile.style.display = 'block';
+											}
+										}
+										
+										var urnDiv = document.getElementsByName("urnDiv");
+										var plaque = document.getElementsByName("plaque");
+										var cremation = document.getElementById("cremation");
+										var religiousCremation = document.getElementById("religiousCremation");
+										
+										function burialChange(src){
+											if (src == 'gov' || src == 'cemetery' || src == 'religious'){
+												for (i=0; i<plaque.length; i++){
+													plaque[i].style.display = 'block';
+												}
+											}
+											else {
+												for (i=0; i<plaque.length; i++){
+													plaque[i].style.display = 'none';
+												}
+											}
+											
+											if (src == 'gov' || src == 'religious'){
+												for (i=0; i<urnDiv.length; i++){
+													urnDiv[i].style.display = 'block';
+												}
+											}
+											else {
+												for (i=0; i<urnDiv.length; i++){
+													urnDiv[i].style.display = 'none';
+												}
+											}
+											
+											if (src == 'cemetery'){
+												cremation.style.display = 'block';
+											}
+											else {
+												cremation.style.display = 'none';
+											}
+											
+											if (src == 'religious'){
+												religiousCremation.style.display = 'block';
+											}
+											else {
+												religiousCremation.style.display = 'none';
+											}
+											
+										}
+										
+										// Character count
+										var plaquequote = document.getElementById('plaquequote');
+										var dcount = document.getElementById('dcount');
+										var maxCountReached = document.getElementById('maxCountReached');
+										
+										plaquequote.addEventListener('keyup', function(e){
+											checkDesc();
+										});
+										
+										function checkDesc(){
+											if (plaquequote.value.length > 170) {
+												plaquequote.value = plaquequote.value.slice(0, 170);
+												maxCountReached.style.display= '';
+											}
+											else {
+												maxCountReached.style.display= 'none';
+											}
+											
+											if (plaquequote.value.length == 170)
+												maxCountReached.style.display= '';
+											
+											dcount.innerText = plaquequote.value.length;
+										}
+										
+										var religion = localStorage.getItem("religion");
+										if (religion == ""){
+											window.location.href = "./religion.html";
+										}
+										
+										var christian = ['All Saints Memorial Chapel', 'Franciscan Columbarium'];
+										var catholic = ['Spiritual Grace Presbyterian Church', 'Church of The Immaculate Heart of Mary', 'Church of St Teresa'];
+										var others = ['Tse Tho Aum Temple', 'Tian Jue Columbarium', 'Columbarium Niche'];
+										var list = document.getElementById('religiousNameList');
+										
+										
+										if (religion == "christian"){
+											christian.forEach(function(item){
+											   var option = document.createElement('option');
+											   option.value = item;
+											   option.text = item;
+											   list.appendChild(option);
+											});
+										}
+										else if (religion == "catholic"){
+											catholic.forEach(function(item){
+											   var option = document.createElement('option');
+											   option.value = item;
+											   option.text = item;
+											   list.appendChild(option);
+											});
+										}
+										else {
+											others.forEach(function(item){
+											   var option = document.createElement('option');
+											   option.value = item;
+											   option.text = item;
+											   list.appendChild(option);
+											});
+										}
+										
+										setrbl('finalRestingPlace','test');
 									</script>
 									
-									<div class="form-group col-md-3">
-										<button name="back" type="back" value="Back" class="btn w-100 btn-secondary btn-lg" style="background-color: #e0ded7; color: black" onclick="location.href = 'wake-plans.html';">Previous</button>
+									<div class="col-lg-6">
+										<!-- Intentionally left blank -->
 									</div>
-									
 									<div class="form-group col-md-3">
-										<button name="submit" type="submit" value="Submit" class="btn w-100 btn-secondary btn-lg" onclick="location.href = 'funeral-plans.html';">Save & Next</button>
+										<button name="back" type="back" value="Back" class="btn w-100 btn-secondary btn-lg" style="background-color: #e0ded7; color: black" onclick="location.href = 'wake-addons.html';">Previous</button>
+									</div>
+									<div class="col-lg-3">
+										<button name="submit" type="submit" value="Submit" class="btn w-100 btn-secondary btn-lg" onclick="location.href = 'plan-executor.html';">Save & Next</button>
 									</div>
 								</div>
 							</form>
 						</div>
 						
-					</div>
+
 				</div>
 			</div>
 		</section>
-		
 		
 	</div>
 	

@@ -33,7 +33,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
 	
 	<!-- PAGE TITLE HERE ============================================= -->
-	<title>MediTro - Doctor, Medical & Healthcare HTML Template</title>
+	<title>Confirmation & Payment - Wake/Funeral Planning</title>
 	
 	<!-- MOBILE SPECIFIC ============================================= -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,12 +42,49 @@
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap-select/css/bootstrap-select.min.css">
 	<link rel="stylesheet" href="vendor/swiper/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/progressindicatorbar.css">
 	
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	
+	<style>
+
+/* HIDE RADIO */
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+  outline: 5px solid #f4925a;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+
+.checkboxes label {
+    font-size: 17px;
+}
+
+@media (min-width:1000px) {
+	#dynamicParent {
+		padding-left: 20%; 
+		padding-right: 20%; 
+	}
+}
+
+	</style>
 </head>
 <body>
 <div class="page-wraper">
@@ -156,12 +193,12 @@
 			<div class="page-banner banner-lg contact-banner" style="background-image:url(images/banner/img1.jpg);">
 				<div class="container">
 					<div class="page-banner-entry text-center">
-						<h1>Catalouge</h1>
+						<h1>Pre-Funeral Planning</h1>
 						<!-- Breadcrumb row -->
 						<nav aria-label="breadcrumb" class="breadcrumb-row">
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Home</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Catalouge</li>
+								<li class="breadcrumb-item active" aria-current="page">Pre-Funeral Planning</li>
 							</ul>
 						</nav>
 					</div>
@@ -177,47 +214,193 @@
 				<div class="contact-wraper">
 					<div class="row">
 						<div class="col-lg-12 mb-30">
-							<table class="table table-striped">
-							  <thead>
-								<tr>
-								  <th scope="col">ID</th>
-								  <th scope="col">Name</th>
-								  <th scope="col">Image</th>
-								  <th scope="col">Price</th>
-								  <th scope="col">Delete</th>
-								</tr>
-							  </thead>
-							  <tbody>
-								<tr>
-								  <th scope="row">1</th>
-								  <td>Half glass white casket</td>
-								  <td><img src="images/funeral/catalouge/grace-white.png" alt="Girl in a jacket" width="200" height="auto"></td>
-								  <td>$899</td>
-								  <td><button type="button" class="btn btn-danger">Delete</button></td>
-								</tr>
-								<tr>
-								  <th scope="row">2</th>
-								  <td>Light Brown casket</td>
-								  <td><img src="images/funeral/catalouge/dark-brown.png" alt="Girl in a jacket" width="200" height="auto"></td>
-								  <td>$650</td>
-								  <td><button type="button" class="btn btn-danger">Delete</button></td>
-								</tr>
-								<tr>
-								  <th scope="row">3</th>
-								  <td>Dark Brown casket</td>
-								  <td><img src="images/funeral/catalouge/light-brown.png" alt="Girl in a jacket" width="200" height="auto"></td>
-								  <td>780</td>
-								  <td><button type="button" class="btn btn-danger">Delete</button></td>
-								</tr>
-							  </tbody>
-							</table>
+							<form class="form-wraper contact-form ajax-form" action="script/contact.php">
+								<div class="ajax-message"></div>
+								
+								<div class="stepper-wrapper">
+									  <div class="stepper-item completed">
+										<div class="step-counter">1</div>
+										<div class="step-name"><a href="religion.html">Religion</a></div>
+									  </div>
+									  <div class="stepper-item completed">
+										<div class="step-counter">2</div>
+										<div class="step-name"><a href="wake-location.html">Wake <br>Location</a></div>
+									  </div>
+									  <div class="stepper-item completed">
+										<div class="step-counter">3</div>
+										<div class="step-name"><a href="wake-plans.html">Wake <br>Plans</a></div>
+									  </div>
+									  <div class="stepper-item completed">
+										<div class="step-counter">4</div>
+										<div class="step-name"><a href="wake-addons.html">Wake <br>Add-ons</a></div>
+									  </div>
+									  <div class="stepper-item completed">
+										<div class="step-counter">5</div>
+										<div class="step-name"><a href="funeral-plans.html">Funeral <br>Plans</a></div>
+									  </div>
+									  <div class="stepper-item completed">
+										<div class="step-counter">6</div>
+										<div class="step-name"><a href="resting-place.html">Final Resting<br>Place</a></div>
+									  </div>
+									  <div class="stepper-item completed">
+										<div class="step-counter">7</div>
+										<div class="step-name"><a href="plan-executor.html">Plan<br>Executor(s)</a></div>
+									  </div>
+									  <div class="stepper-item active">
+										<div class="step-counter">8</div>
+										<div class="step-name">Confirmation<br>& Payment</div>
+									  </div>
+								</div>
+								
+								<center><h5><u>Review and Confirm</u></h5></center>
+								<div class="row" id="dynamicParent">
+										
+										
+										<script>
+											function capitalizeFirstLetter(string) {
+											  return string.charAt(0).toUpperCase() + string.slice(1);
+											}
+											
+											function addDynamicItems(mainTitle, arrayStorage, arrayTitles){
+												const dynamicParent = document.getElementById("dynamicParent");
+												const h6 = document.createElement("h6");
+												const text = document.createTextNode(mainTitle);
+												h6.appendChild(text);
+												dynamicParent.appendChild(h6);
+												// Check and remove if null/undefined
+												var i = arrayStorage.length;
+												while(i--)
+												{
+													if (localStorage.getItem(arrayStorage[i]) == null || localStorage.getItem(arrayStorage[i]) === undefined || localStorage.getItem(arrayStorage[i]) == "") { 
+														arrayStorage.splice(i, 1); 
+														arrayTitles.splice(i, 1);
+													}
+													if(i == 0){
+														break;
+													}
+												}
+												
+												// Retrieve
+												for(i=0; i<arrayStorage.length; i++){
+													//document.getElementById("result").innerHTML = localStorage.getItem("name");
+													// Column 1
+													if (localStorage.getItem(arrayStorage[i]) != "false"){
+														// only print out if not false, reduce visual fatigue.
+														const divTitle = document.createElement("div");
+														divTitle.classList = "col-6";
+														
+														const span = document.createElement("span");
+														span.textContent = arrayTitles[i] + ":";
+														
+														divTitle.appendChild(span);
+														dynamicParent.appendChild(divTitle);
+														
+														// Column 2
+														const divVar = document.createElement("div");
+														divVar.classList = "col-6";
+														
+														const spanVar = document.createElement("span");
+														if(localStorage.getItem(arrayStorage[i]) == "true"){
+															spanVar.textContent = "Yes";
+														}
+														else {
+															spanVar.textContent = capitalizeFirstLetter(localStorage.getItem(arrayStorage[i]));
+														}
+														
+														divVar.appendChild(spanVar);
+														dynamicParent.appendChild(divVar);
+													}
+												}
+												const hr = document.createElement("hr");
+												dynamicParent.appendChild(hr);
+											}
+											
+											if (typeof(Storage) !== "undefined") {
+												var arrayTitles = ['Religion', 'Require Rites', 'Rite Option', 'Religious Place Name', 'Point of Contact Name', 'Point of Contact Number']
+												var arrayStorage = ['religion', 'requireRites', 'riteType', 'religiousPlaceName', 'ritePOCName', 'ritePOCNumber'];
+												addDynamicItems("Religion", arrayStorage, arrayTitles);
+												
+												var arrayTitles1 = ['Location Type', 'Postal Code'];
+												var arrayStorage1 = ['wakeLocationIn', 'wakePostalCode'];
+												addDynamicItems("Location", arrayStorage1, arrayTitles1);
+												
+											} else {
+												alert("Sorry, your browser does not support Web Storage...");
+											}
+										</script>
+									<h5><u>Proceed to Payment</u></h5>
+									<div id="smart-button-container" style="border:3px solid black; padding: 0 10% 0 10%">
+										<span style="font-weight: bold;"><center>Pay today and Pay: <u>$2,400</u></center></span>
+										<div style="text-align: center;">
+											<div id="paypal-button-container"></div>
+										</div>
+									</div>
+									<script>
+										<script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID"> // Replace YOUR_CLIENT_ID with your sandbox client ID
+									</script>
+
+									
+									<div id="paypal-button-container"></div>
+
+									<!-- Add the checkout buttons, set up the order and approve the order -->
+									<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=SGD"
+										data-sdk-integration-source="button-factory"></script>
+									<script>
+											function initPayPalButton() {
+							  
+												paypal.Buttons({
+													style: {
+														shape: 'rect',
+														color: 'gold',
+														layout: 'vertical',
+														label: 'checkout',
+
+													},
+
+													createOrder: function (data, actions) {
+														return actions.order.create({
+															purchase_units: [{ "amount": { "currency_code": "SGD", "value":2400  } }]
+														});
+													},
+
+													onApprove: function (data, actions) {
+														return actions.order.capture().then(function (details) {
+															window.location.replace("/funeralplan-complete.html");
+														});
+													},
+
+													onError: function (err) {
+														console.log(err);
+														
+													}
+												}).render('#paypal-button-container');
+										}
+											initPayPalButton();
+									</script>
+									<br>
+									<div class="col-12">
+										<button onclick="location.href = 'funeralplan-complete-futurepay.html';" class="form-control" style="background-color: #565ace; color: white;">Opt-in for Future Payment*</button>
+										<span style="font-weight: bold;">Note:</span> *The prices reflected here is only for current payment and is subjective to inflation changes, at about 1-3% increment annually if you were to opt for future payment.
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Learn more about Future Payment</button>
+									<div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionRow1">
+										<div class="accordion-body">
+											Your concerns, our priority. We understand that most people would not want to dedicate a large sum of money into something that might only happen many years later. Hence, we introduced a way for you to pay only after your passing.<br><br>
+											<h6><u>How does this work?</u></h6>
+											1. You complete your pre-funeral planning and opt for future payment.<br>
+											2. We will send an email to your executors to ensure they know about it.<br>
+											3. Once your executor acknowledged it, we will keep your plan in our database. <br>
+											4. Upon your final breath, your executors will make payment on your behalf and we will execute your plan according to your plans.
+										</div>
+									</div>
+									</div>
+								</div>
+							</form>
 						</div>
 						
 					</div>
 				</div>
 			</div>
 		</section>
-		
 		
 		
 	</div>

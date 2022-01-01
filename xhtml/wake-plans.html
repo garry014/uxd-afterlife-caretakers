@@ -33,7 +33,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
 	
 	<!-- PAGE TITLE HERE ============================================= -->
-	<title>MediTro - Doctor, Medical & Healthcare HTML Template</title>
+	<title>Wake Plans - Wake/Funeral Planning</title>
 	
 	<!-- MOBILE SPECIFIC ============================================= -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,6 +42,7 @@
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap-select/css/bootstrap-select.min.css">
 	<link rel="stylesheet" href="vendor/swiper/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/progressindicatorbar.css">
 	
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,86 +50,6 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	
 	<style>
-	
-  .stepper-wrapper {
-  margin-top: auto;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-.stepper-item {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-
-  @media (max-width: 768px) {
-    font-size: 12px;
-  }
-}
-
-.stepper-item::before {
-  position: absolute;
-  content: "";
-  border-bottom: 2px solid #ccc;
-  width: 100%;
-  top: 20px;
-  left: -50%;
-  z-index: 2;
-}
-
-.stepper-item::after {
-  position: absolute;
-  content: "";
-  border-bottom: 2px solid #ccc;
-  width: 100%;
-  top: 20px;
-  left: 50%;
-  z-index: 2;
-}
-
-.stepper-item .step-counter {
-  position: relative;
-  z-index: 5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #ccc;
-  margin-bottom: 6px;
-}
-
-.stepper-item.active {
-  font-weight: bold;
-}
-
-.stepper-item.completed .step-counter {
-  background-color: #4bb543;
-}
-
-.stepper-item.completed::after {
-  position: absolute;
-  content: "";
-  border-bottom: 2px solid #4bb543;
-  width: 100%;
-  top: 20px;
-  left: 50%;
-  z-index: 3;
-}
-
-.stepper-item:first-child::before {
-  content: none;
-}
-.stepper-item:last-child::after {
-  content: none;
-}
-
-.step-name{
-	text-align: center;
-}
 
 /* HIDE RADIO */
 [type=radio] { 
@@ -145,21 +66,36 @@
 
 /* CHECKED STYLES */
 [type=radio]:checked + img {
-  outline: 5px solid #008000;
+  outline: 5px solid #f4925a;
 }
 
-.textOnImg {
+input[type=checkbox] {
+    transform: scale(1.5);
+}
+.checkboxes label {
+    font-size: 17px;
+}
+
+.textImgContainer {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.textImgContainer img {vertical-align: middle;}
+
+.textImgContainer .content {
   position: absolute;
-  top: 90%;
-  left: 35%;
-  transform: translate(-50%, -50%);
-  background-color: black;
-  opacity: 0.6;
-  color: white;
-  padding-left: 50px;
-  padding-right: 50px;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  font-size: 18px;
 }
-
 	</style>
 </head>
 <body>
@@ -269,12 +205,12 @@
 			<div class="page-banner banner-lg contact-banner" style="background-image:url(images/banner/img1.jpg);">
 				<div class="container">
 					<div class="page-banner-entry text-center">
-						<h1>Wake Planning</h1>
+						<h1>Pre-Funeral Planning</h1>
 						<!-- Breadcrumb row -->
 						<nav aria-label="breadcrumb" class="breadcrumb-row">
 							<ul class="breadcrumb">
 								<li class="breadcrumb-item"><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Home</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Wake Planning</li>
+								<li class="breadcrumb-item active" aria-current="page">Pre-Funeral Planning</li>
 							</ul>
 						</nav>
 					</div>
@@ -292,15 +228,14 @@
 						<div class="col-lg-12 mb-30">
 							<form class="form-wraper contact-form ajax-form" action="script/contact.php">
 								<div class="ajax-message"></div>
-								
-								  <div class="stepper-wrapper">
+								<div class="stepper-wrapper">
 									  <div class="stepper-item completed">
 										<div class="step-counter">1</div>
-										<div class="step-name">Religion</div>
+										<div class="step-name"><a href="religion.html">Religion</a></div>
 									  </div>
 									  <div class="stepper-item completed">
 										<div class="step-counter">2</div>
-										<div class="step-name">Wake <br>Location</div>
+										<div class="step-name"><a href="wake-location.html">Wake <br>Location</a></div>
 									  </div>
 									  <div class="stepper-item active">
 										<div class="step-counter">3</div>
@@ -310,42 +245,100 @@
 										<div class="step-counter">4</div>
 										<div class="step-name">Wake <br>Add-ons</div>
 									  </div>
+									  <div class="stepper-item">
+										<div class="step-counter">5</div>
+										<div class="step-name">Funeral <br>Plans</div>
+									  </div>
+									  <div class="stepper-item">
+										<div class="step-counter">6</div>
+										<div class="step-name">Final Resting<br>Place</div>
+									  </div>
+									  <div class="stepper-item">
+										<div class="step-counter">7</div>
+										<div class="step-name">Plan<br>Executor(s)</div>
+									  </div>
+									  <div class="stepper-item">
+										<div class="step-counter">8</div>
+										<div class="step-name">Confirmation<br>& Payment</div>
+									  </div>
 								</div>
 								<h5><u>About wake plans</u></h5>
 								*Required to fill in or select.<br><br>
 								<div class="row">
 									<label><span style="font-weight:bold">Casket Selection:* </span></label><br>
+									<label>We will recommend taking the more economical options unless it's for burial purposes.</label><br>
 									<div class="form-group col-md-4">
-										
 										<label>
-										  <input type="radio" name="test" value="small" checked>
+										<div class="textImgContainer">
+										  <input type="radio" name="test" value="dark-brown" checked>
 										  <img src="images/funeral/catalouge/dark-brown.png">
-										  <div class="textOnImg">Dark Brown - $799</div>
+										  <div class="content">Wood Dark Brown - $799</div>
+										</div>
 										</label>
 									</div>
 									<div class="form-group col-md-4">
 										<label>
-										  <input type="radio" name="test" value="small">
+										<div class="textImgContainer">
+										  <input type="radio" name="test" value="light-brown">
 										  <img src="images/funeral/catalouge/light-brown.png">
-										  <div class="textOnImg">Light Brown - $850</div>
+										  <div class="content">Wood Light Brown - $850</div>
+										</div>
 										</label>
 									</div>
 									<div class="form-group col-md-4">
 										<label>
-										  <input type="radio" name="test" value="small">
+										<div class="textImgContainer">
+										  <input type="radio" name="test" value="grace-white">
 										  <img src="images/funeral/catalouge/grace-white.png">
-										  <div class="textOnImg">White - $876</div>
+										  <div class="content">Wood White - $876</div>
+										</div>
 										</label>
 									</div>
 									
+									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">View more casket designs</button>
+									
+									<div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionRow1">
+										<div class="row">
+											<div class="form-group col-md-4">
+												<label>
+												<div class="textImgContainer">
+												  <input type="radio" name="test" value="metal-black">
+												  <img src="images/funeral/catalouge/metal-black.png">
+												  <div class="content">Metal Black - $1999</div>
+												</div>
+												</label>
+											</div>
+											<div class="form-group col-md-4">
+												<label>
+												<div class="textImgContainer">
+												  <input type="radio" name="test" value="metal-pink">
+												  <img src="images/funeral/catalouge/metal-pink.png">
+												  <div class="content">Metal Pink - $2399</div>
+												</div>
+												</label>
+											</div>
+											<div class="form-group col-md-4">
+												<label>
+												<div class="textImgContainer">
+												  <input type="radio" name="test" value="metal-blue">
+												  <img src="images/funeral/catalouge/metal-blue.png">
+												  <div class="content">Metal Blue - $2399</div>
+												</div>
+												</label>
+											</div>
+										</div>
+									</div>
+									
 									<div class="form-group col-md-6">
-										<label><span style="font-weight:bold">Number of days:* </span></label>
-										<select class="form-select">
+										<label><span style="font-weight:bold">Number of days:* </span></label> <i class="fa fa-question-circle" title="It will be advisable to take into account of your amount of friends, relatives and direct family members's friends, along with your budget. Typically a wake is conducted over 3 days."></i>
+										<select class="form-select" id="wakeDuration">
 											<option selected>Select Number of Days</option>
 											<option value="2">2 days</option>
-											<option value="3">3 days</option>
+											<option value="3">3 days [RECOMMENDED]</option>
 											<option value="4">4 days</option>
 											<option value="5">5 days</option>
+											<option value="6">6 days</option>
+											<option value="7">7 days</option>
 										</select>
 									</div>
 									<div class="form-group col-md-12">
@@ -354,6 +347,7 @@
 									</div>
 									<div class="form-group col-md-6">
 										<label><span style="font-weight:bold">Photo of attire to be worn:* </span></label>
+										<i class="fa fa-question-circle" title="This photo saves as a reference for your loved-ones to be able to find the attire you would want."></i></a>
 										<input type="file" id="myFile" name="filename">
 									</div>
 									<div class="form-group col-md-6">
@@ -361,22 +355,25 @@
 										<i class="fa fa-question-circle" title="Please indicate where you would place this attire, to ease your family members from finding it."></i>
 										<input name="phone" type="text" required class="form-control" placeholder="Location of attire">
 									</div>
+									
+									<hr>
+									<h5><u>Expected Setup</u></h5>
 									<div class="form-group col-md-6">
 										<label><span style="font-weight:bold">Guests Expected per Day:* </span> </label>
 										<i class="fa fa-question-circle" title="This is the number of expected number of guests you expect in a day. Using this data, we will estimate on the next few choices you make."></i>
 										<select class="form-select" onchange="guestsChange()" id="guests">
 											<option selected></option>
-											<option value="1">0-50</option>
-											<option value="2">51-100</option>
-											<option value="3">100-200</option>
-											<option value="4">>200</option>
+											<option value="1">0-50 (+$300)</option>
+											<option value="2">51-100 (+$500)</option>
+											<option value="3">100-200 (+$1000)</option>
+											<option value="4">>200 (+$2300)</option>
 										</select>
 									</div>
-									<div class="form-group col-md-12">
-										<h5><u>Expected Setup</u></h5>	
+									<div class="form-group col-md-12">	
 										<span id="expectedSetup">Please select your guests expected, to be able to view the expected setup.</span>
 										<br>Photo, frame, bathing/dressing services comes as a complimentary service.
 										
+										<script src="./js/setvars.js"></script>
 										<script>
 										function guestsChange() {
 										  if (document.getElementById("guests").value == 1){
@@ -392,13 +389,25 @@
 											document.getElementById("expectedSetup").innerHTML = "According to your expected number of guests, the basic setup are as followed; <br>- 30 round tables <br>- 210 chairs <br>- Lighting & 30 fans <br>- Sound Systems, Carpet flooring, section curtains, table cloth & religion backdrop.";
 										  }
 										  else {
-											document.getElementById("expectedSetup").innerHTML = "Please select your guests expected, to be able to view the expected menu";
+											document.getElementById("expectedSetup").innerHTML = "Please select your guests expected, to be able to view the expected setup.";
 										  }
 										}
+										
+										setrbl('casket','test');
+										setddl('wakeDuration','wakeDuration');
+										setddl('wakeGuestsExpected', 'guests');
 										</script>
 									</div>
-									<div class="col-lg-12">
-										<button name="submit" type="submit" value="Submit" class="btn w-25 btn-secondary btn-lg" style="float: right;">Next</button>
+									
+									<div class="form-group col-md-6">
+										<!-- Intentionally left blank -->
+									</div>
+									<div class="form-group col-md-3">
+										<button name="back" type="back" value="Back" class="btn w-100 btn-secondary btn-lg" style="background-color: #e0ded7; color: black" onclick="location.href = 'wake-location.html';">Previous</button>
+									</div>
+									
+									<div class="form-group col-md-3">
+										<button name="submit" type="submit" value="Submit" class="btn w-100 btn-secondary btn-lg" onclick="location.href = 'wake-addons.html';">Save & Next</button>
 									</div>
 								</div>
 							</form>
