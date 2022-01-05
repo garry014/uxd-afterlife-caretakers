@@ -319,6 +319,7 @@ input[type=checkbox] {
 											<option value="3">100-200</option>
 											<option value="4">>200</option>
 										</select>
+										<span class="text-danger" style="display:none;" id="showErrorMsg">Please select the number of guests expected.</span>
 									</div>
 									<div class="col-lg-4">
 										<!-- Intentionally left blank -->
@@ -339,7 +340,17 @@ input[type=checkbox] {
 										<button name="back" type="back" value="Back" class="btn w-100 btn-secondary btn-lg" style="background-color: #e0ded7; color: black" onclick="location.href = 'wake-addons.html';">Previous</button>
 									</div>
 									<div class="col-lg-3">
-										<button name="submit" type="submit" value="Submit" class="btn w-100 btn-secondary btn-lg" onclick="location.href = 'resting-place.html';">Save & Next</button>
+										<button name="submit" type="submit" value="Submit" class="btn w-100 btn-secondary btn-lg" onclick="checkForm();">Save & Next</button>
+										<script>
+											function checkForm(){
+												if(document.getElementById("guests").value == ""){
+													document.getElementById("showErrorMsg").style.display = "block";
+												}
+												else{
+													window.location.href = "resting-place.html";
+												}
+											}
+										</script>
 									</div>
 								</div>
 							</form>
