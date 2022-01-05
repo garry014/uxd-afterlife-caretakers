@@ -51,30 +51,43 @@
 	
 	<style>
 
-/* HIDE RADIO */
-[type=radio] { 
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* IMAGE STYLES */
-[type=radio] + img {
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
   cursor: pointer;
-}
-
-/* CHECKED STYLES */
-[type=radio]:checked + img {
-  outline: 5px solid #565ace;
-}
-
-input[type=checkbox] {
-    transform: scale(1.5);
-}
-
-.checkboxes label {
-    font-size: 17px;
 }
 
 #dynamicParent {
@@ -227,27 +240,9 @@ input[type=checkbox] {
 										<span style="font-weight: bold;">Payment Status:</span> Payment to be made in the future.<br><br>
 										<button name="back" type="back" value="Back" class="btn w-75 btn-secondary btn-lg" style="background-color: #5559cd; color: white; border:none;" onclick="location.href = 'wake-plans.html';"><i class="far fa-eye"></i> View My Plan</button><br><br>
 										<button name="submit" type="submit" value="Submit" class="btn w-75 btn-secondary btn-lg" onclick="location.href = 'funeral-plans.html';"><i class="fas fa-edit"></i> Edit My Plan</button><br><br>
-										<button type="button" class="btn w-75 btn-secondary btn-lg" style="background-color: #f82c54; color: white; border:none;" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-trash-alt"></i> Delete My Plan</button>
+										<button type="button" class="btn w-75 btn-secondary btn-lg" style="background-color: #f82c54; color: white; border:none;" id="myBtn"><i class="fas fa-trash-alt"></i> Delete My Plan</button>
 										
-										<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-										  <div class="modal-dialog" role="document">
-											<div class="modal-content">
-											  <div class="modal-header">
-												<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-												  <span aria-hidden="true">&times;</span>
-												</button>
-											  </div>
-											  <div class="modal-body">
-												...
-											  </div>
-											  <div class="modal-footer">
-												<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-												<button type="button" class="btn btn-primary">Save changes</button>
-											  </div>
-											</div>
-										  </div>
-										</div>
+										
 									</div>
 								</div>
 							</form>
@@ -258,7 +253,64 @@ input[type=checkbox] {
 			</div>
 		</section>
 		
-		
+		<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" style="text-align: right;">&times;</span>
+	<center><h4>Delete Plan?</h4></center>
+    
+    <center><p class="text-danger"><span style="font-weight:bold">WARNING:</span> This action cannot be undone!</p>
+	<p>We are sad to see you go, but if you have made up your mind, <br>we will honour our promise and provide you with a full refund.</p>
+	<p style="font-weight:bold">FINAL REFUND AMOUNT: $2,456.10</p>
+	<p>Type in "delete" into the textbox to continue.</p>
+	<input type="text" class="form-control" style="width:250px;" id="confirmText" placeholder="Type keyword to continue"/></center><br/>
+	<div id="dynamicParent">
+		<button type="button" class="btn btn-light" style="background-color: #D3D3D3; color: black" id="close">Cancel</button> 
+		<button type="button" class="btn btn-danger" style="color: white" onclick="deletePlan();">Delete</button>
+	</div>
+  </div>
+
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+var close = document.getElementById("close");
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+close.onclick = function() {
+  modal.style.display = "none";
+}
+
+function deletePlan() {
+	if(document.getElementById("confirmText").value == "delete"){
+		window.location.href = "deletefuneralsuccess.html";
+	}
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 	</div>
 	
 	<!-- Footer ==== -->
