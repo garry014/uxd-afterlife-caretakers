@@ -15968,5 +15968,27 @@ footer {
     .footer .pt-img4 {
       bottom: 40px;
       sright: 0px; } }
+/* start of new  */
+.BButton {
+  background-color: saddlebrown;
+  color: #fff;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 15px 30px;
+  border: 2px solid;
+  border-color: saddlebrown;
+  border-radius: 8px;
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+  line-height: 1.2;
+}
 
+.BButton:hover,
+.BButton:focus,
+.BButton:active {
+  background-color: saddlebrown;
+}
 /*# sourceMappingURL=style.css.map */
