@@ -310,6 +310,15 @@
 									</div>	
 									</div>
 								</form>
+								<!-- start -->
+								<strong>Payment Summary:</strong>
+								<br>
+								<strong>Will Creation: $86</strong>
+								<br>
+								<strong>Appointment with Advisor: $44</strong>
+								<br>
+								<strong>Finding 2 Witness: $20</strong>
+								<!-- end -->
 						<div class="col-sm-9 col-md-6 col-lg-8 col-xl-12" >
 							<form class="form-wraper contact-form ajax-form" action="script/contact.php">
 								<div class="col align-self-center">
@@ -318,11 +327,9 @@
 									</div>
 							</form>
                             <div class="Place-order mt-25">
-								<div id="smart-button-container">
-									<div style="text-align: center;">
-										<div id="paypal-button-container"></div>
-									</div>
-								</div>
+								<div id="smart-button-container" style="border:3px solid black; padding: 0 10% 0 10%">
+									<span style="font-weight: bold;"><center>Total: <u>$150</u></center></span>
+								
 								<script>
 									<script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID"/> // Replace YOUR_CLIENT_ID with your sandbox client ID
 								</script>
@@ -347,12 +354,12 @@
 		
 												createOrder: function (data, actions) {
 													// element = document.getElementById("cancelBtn");
-													// if(element == null){
+													// if(element == null){ 
 													// 	alert("Please confirm billing details!")
 													// 	return false;
 													// }
 													return actions.order.create({
-														purchase_units: [{ "amount": { "currency_code": "SGD", "value":"200"}}]
+														purchase_units: [{ "amount": { "currency_code": "SGD", "value":"150"}}]
 													});
 												},
 		
@@ -373,6 +380,7 @@
 
 								</script>
                                  </div>
+								</div>
                                 </div>
                             </div>
                             
