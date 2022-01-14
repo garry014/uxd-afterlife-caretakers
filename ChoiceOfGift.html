@@ -153,6 +153,29 @@
 		  </style>
 </head>
 <body>
+	<script>
+		function radio_input()
+{
+    var specific = document.getElementById("specifictype")
+    var nonspecific = document.getElementById("nonspecifictype")
+    if (specific.checked){
+        window.location.replace="specificgift.html"
+    }
+    else if (nonspecific){
+        window.location.replace="DistributionOfAssets.html"
+    }
+    // var theChoice = document.getElementById("gifttype")
+
+    // switch (theChoice.value){
+    //     case 'specifictype':
+    //         window.location.replace="specificgift.html"
+    //         break
+    //     case 'nonspecifictype':
+    //         window.location.replace="DistributionOfAssets.html"
+    //         break
+    // }
+}
+	</script>
 <div class="page-wraper">
 	<div id="loading-icon-bx">
 		<div class="loading-inner">
@@ -309,11 +332,11 @@
 								</form>
 									
 						<div class="col-xl-6 mb-30">
-								<div class="row">
+								<div id="gifttype" class="row">
 									<h5>Gift Choice:</h5>
 									<div class="form-group col-sm-6">
 										<label>
-										  <input type="radio" name="test" value="small" checked>
+										  <input id="specifictype"  type="radio" name="test" value="yes" checked>
 										  <!-- width="500px" height="600px" -->
 										  <img class="ImageGiftChoice" src="images/tick copy.png">
 										</label>
@@ -330,7 +353,7 @@
 									</div>
 									<div class="form-group col-sm-6">
 										<label>
-										  <input type="radio" name="test" value="small">
+										  <input id="nonspecifictype" type="radio" name="test" value="no">
 										  <img class="ImageGiftChoice" src="images/cross.png" >
 										</label>
 										<div class="page-content">
@@ -340,19 +363,6 @@
 												percentage of your choice.</b></small>
 										</div>
 									</div>
-                                      
-                                    
-                                   
-                                    <!-- Adding another child -->
-                                    <!-- <div class="form-group col-md-8">
-                                        <button type="button"style="border:dotted 1px black;" class="btn-btn-dashed-secondary btn-block js-add-child">Add Receipient</button>
-                                    
-                                    </div> -->
-									<!-- <div class="form-group col-md-6">
-                                        <label for="fname"> Email</label><br>
-										<input name="email" type="email" required class="form-control" placeholder="Email">
-									</div> -->
-                                    
 									<div class="col-lg-12">
 										<button name="submit" type="submit" value="Save" class="btn w-100 btn-secondary btn-lg">Save</button>
 									</div>
@@ -368,10 +378,43 @@
                                 </div>
                                 <br>
                                 <div class="col-sm-6">
-									<form action="DistributionofAssets.html" method="post">
+									<!-- <form action="DistributionofAssets.html" method="post">
 										<button name="submit" type="submit" value="Next" class="btn w-100 btn-secondary btn-lg">Next</button>
-									</form>
-                                    
+									</form> -->
+                                    <a onclick="return radio_input();" class="btn w-100 btn-secondary btn-lg shadow">Next</a>
+									<script>
+										function radio_input()
+										{
+											console.log("dv")
+											// var specific = document.getElementById("specifictype")
+											// var nonspecific = document.getElementById("nonspecifictype")
+											// if (specific.checked){
+											// 	window.location.replace="specificgift.html"
+											// }
+											// else if (nonspecific){
+											// 	window.location.replace="DistributionOfAssets.html"
+											// }
+											// var theChoice = document.getElementById("gifttype")
+
+											// switch (theChoice.value){
+											//     case 'specifictype':
+											//         window.location.replace="specificgift.html"
+											//         break
+											//     case 'nonspecifictype':
+											//         window.location.replace="DistributionOfAssets.html"
+											//         break
+											// }
+
+											var specific = document.querySelector('input[name="test"]:checked').value;
+											console.log(specific);
+											if (specific == "yes"){
+												window.location="specificgift.html"
+											}
+											else {
+												window.location="DistributionOfAssets.html"
+											}
+										}
+									</script>
                                 </div>
                             </div>
                             
@@ -493,5 +536,6 @@
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <script src="js/functions.js"></script>
 <script src="js/contact.js"></script>
+<script src="/js/test.js"></script>
 </body>
 </html>
