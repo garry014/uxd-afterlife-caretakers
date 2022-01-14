@@ -388,7 +388,7 @@ input[type=checkbox] {
 											navigator.geolocation.getCurrentPosition(function(position){
 												console.log(position);
 												$.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude + "&sensor=false&key=AIzaSyBO0MrrmlS2Fyp_DWfjlPy_ymuZCHiCqYY", function(addressData) {
-													document.getElementById('postalcode').value = addressData.results[0].address_components[5].long_name;
+													document.getElementById('postalcode').value = addressData.results[1].address_components[5].long_name;
 													//console.log(addressData.results[0].address_components[5].long_name);
 													document.getElementById('address').value = addressData.results[0].formatted_address;
 												});
