@@ -1,282 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	
+
 	<!-- META ============================================= -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	
+
 	<!-- OG -->
 	<meta name="robots" content="index, follow">
-	<meta name="keywords" content="Clinic, Medical Health Center, Health Dental, Creative, Healthcare, Industry, Lifestyle, Blogging, meditation, Design" />
+	<meta name="keywords"
+		content="Clinic, Medical Health Center, Health Dental, Creative, Healthcare, Industry, Lifestyle, Blogging, meditation, Design" />
 	<meta name="author" content="ThemeTrades" />
-	<meta name="description" content="MediTro is a Fully Creative Mobile Responsive HTML Template. It is designed specifically for Clinic, Medical Health Center, Health Dental, Creative, Healthcare, Industry, Lifestyle, Blogging, meditation, Design" />
-	
-	<meta property="og:url" content="http://meditro.themetrades.com/html/demo/"/>
-	<meta property="og:site_name" content="MediTro - Doctor, Medical & Healthcare HTML Template"/>
-	<meta property="og:type" content="website"/>
-	<meta property="og:locale" content="en_us"/>
+	<meta name="description"
+		content="MediTro is a Fully Creative Mobile Responsive HTML Template. It is designed specifically for Clinic, Medical Health Center, Health Dental, Creative, Healthcare, Industry, Lifestyle, Blogging, meditation, Design" />
+
+	<meta property="og:url" content="http://meditro.themetrades.com/html/demo/" />
+	<meta property="og:site_name" content="MediTro - Doctor, Medical & Healthcare HTML Template" />
+	<meta property="og:type" content="website" />
+	<meta property="og:locale" content="en_us" />
 	<meta property="og:title" content="MediTro - Doctor, Medical & Healthcare HTML Template" />
-	<meta property="og:description" content="MediTro is a Fully Creative Mobile Responsive HTML Template. It is designed specifically for Clinic, Medical Health Center, Health Dental, Creative, Healthcare, Industry, Lifestyle, Blogging, meditation, Design"/>
-	<meta property="og:image" content="http://meditro.themetrades.com/html/demo/preview.png"/>
-	
-	<meta name="twitter:card" content="summary"/>
-	<meta name="twitter:url" content="http://meditro.themetrades.com/html/demo/"/>
-	<meta name="twitter:creator" content="@themetrades"/>
-	<meta name="twitter:title" content="MediTro - Doctor, Medical & Healthcare HTML Template"/>
-	<meta name="twitter:description" content="MediTro is a Fully Creative Mobile Responsive HTML Template. It is designed specifically for Clinic, Medical Health Center, Health Dental, Creative, Healthcare, Industry, Lifestyle, Blogging, meditation, Design"/>
-	
+	<meta property="og:description"
+		content="MediTro is a Fully Creative Mobile Responsive HTML Template. It is designed specifically for Clinic, Medical Health Center, Health Dental, Creative, Healthcare, Industry, Lifestyle, Blogging, meditation, Design" />
+	<meta property="og:image" content="http://meditro.themetrades.com/html/demo/preview.png" />
+
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:url" content="http://meditro.themetrades.com/html/demo/" />
+	<meta name="twitter:creator" content="@themetrades" />
+	<meta name="twitter:title" content="MediTro - Doctor, Medical & Healthcare HTML Template" />
+	<meta name="twitter:description"
+		content="MediTro is a Fully Creative Mobile Responsive HTML Template. It is designed specifically for Clinic, Medical Health Center, Health Dental, Creative, Healthcare, Industry, Lifestyle, Blogging, meditation, Design" />
+
 	<meta name="format-detection" content="telephone=no">
-	
+
 	<!-- FAVICONS ICON ============================================= -->
 	<link rel="icon" href="images/favicon.png" type="image/x-icon" />
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
-	
+
 	<!-- PAGE TITLE HERE ============================================= -->
 	<title>Confirmation & Payment - Wake/Funeral Planning</title>
-	
+
 	<!-- MOBILE SPECIFIC ============================================= -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 	<!-- All PLUGINS CSS ============================================= -->
-    <link rel="stylesheet" type="text/css" href="vendor/bootstrap-select/css/bootstrap-select.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap-select/css/bootstrap-select.min.css">
 	<link rel="stylesheet" href="vendor/swiper/swiper.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/progressindicatorbar.css">
-	
+
 	<!-- Google Fonts -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-	
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
+
 	<style>
+		/* HIDE RADIO */
+		[type=radio] {
+			position: absolute;
+			opacity: 0;
+			width: 0;
+			height: 0;
+		}
 
-/* HIDE RADIO */
-[type=radio] { 
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
+		/* IMAGE STYLES */
+		[type=radio]+img {
+			cursor: pointer;
+		}
 
-/* IMAGE STYLES */
-[type=radio] + img {
-  cursor: pointer;
-}
+		/* CHECKED STYLES */
+		[type=radio]:checked+img {
+			outline: 5px solid #f4925a;
+		}
 
-/* CHECKED STYLES */
-[type=radio]:checked + img {
-  outline: 5px solid #f4925a;
-}
+		input[type=checkbox] {
+			transform: scale(1.5);
+		}
 
-input[type=checkbox] {
-    transform: scale(1.5);
-}
+		.checkboxes label {
+			font-size: 17px;
+		}
 
-.checkboxes label {
-    font-size: 17px;
-}
-
-@media (min-width:1000px) {
-	#dynamicParent {
-		padding-left: 20%; 
-		padding-right: 20%; 
-	}
-}
-
+		@media (min-width:1000px) {
+			#dynamicParent {
+				padding-left: 20%;
+				padding-right: 20%;
+			}
+		}
 	</style>
 </head>
-<body>
-<div class="page-wraper">
-	<div id="loading-icon-bx">
-		<div class="loading-inner">
-			<div class="load-one"></div>
-			<div class="load-two"></div>
-			<div class="load-three"></div>
-		</div>
-	</div>
-	
-	<!-- header -->
-        <header class="header rs-nav">
-            <!-- main header -->
-            <div class="sticky-header navbar-expand-lg">
-                <div class="menu-bar clearfix">
-                    <div class="container-fluid clearfix">
-                        <!-- website logo -->
-                        <div class="menu-logo logo-dark">
-                            <a href="/index.html"><img src="images/logo.png" alt=""></a>
-                        </div>
-                        <!-- nav toggle button -->
-                        <button class="navbar-toggler collapsed menuicon justify-content-end" type="button" data-bs-toggle="collapse" data-bs-target="#menuDropdown" aria-controls="menuDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-						
-                        <!-- extra nav -->
 
-                        <div class="secondary-menu" style="margin-left:-10px">
-						<li><a href="contact-us.html" class="btn btn-primary shadow" >LOGIN  <i class="btn-icon-bx fas fa-chevron-right"></i></a></li>
+<body>
+	<div class="page-wraper">
+		<div id="loading-icon-bx">
+			<div class="loading-inner">
+				<div class="load-one"></div>
+				<div class="load-two"></div>
+				<div class="load-three"></div>
+			</div>
+		</div>
+
+		<!-- header -->
+		<header class="header rs-nav">
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-PJ8SXHQXC5"></script>
+			<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag() { dataLayer.push(arguments); }
+				gtag('js', new Date());
+
+				gtag('config', 'G-PJ8SXHQXC5');
+			</script>
+			<!-- main header -->
+			<div class="sticky-header navbar-expand-lg">
+				<div class="menu-bar clearfix">
+					<div class="container-fluid clearfix">
+						<!-- website logo -->
+						<div class="menu-logo logo-dark">
+							<a href="/index.html"><img src="images/logo.png" alt=""></a>
 						</div>
-                        <!-- Search Box ==== -->
-                        <div class="nav-search-bar">
-                            <form action="#">
-                                <input name="search" value="" type="text" class="form-control" placeholder="Type to search">
-                                <span><i class="ti-search"></i></span>
-                            </form>
-                            <span id="searchRemove"><i class="ti-close"></i></span>
-                        </div>
-                        <div class="menu-links navbar-collapse collapse justify-content-end" id="menuDropdown">
-                            <div class="menu-logo">
-                                <a href="index.html"><img src="images/logo-white.png" alt=""></a>
-                            </div>
-                            <ul class="nav navbar-nav">
-                                <li><a href="/index.html">Home</a></li>
-                                <li>
-                                    <a href="javascript:;">Will Making <i class="fas fa-plus"></i></a>
-                                    <ul class="sub-menu">
-                                        <li class="add-menu-left">
-                                            <ul>
-                                                <li><a href="Neccessity.html"><span>Make a Will</span></a></li>
-                                                <li><a href="teamadvisors.html"><span>Our Advisors</span></a></li>
-                                                <li><a href="teamwitnesses.html"><span>Our Witnesses</span></a></li>
-                                                <li><a href="create_lastmessage.html"><span>Create Last Message</span></a></li>
-                                                <!--
+						<!-- nav toggle button -->
+						<button class="navbar-toggler collapsed menuicon justify-content-end" type="button"
+							data-bs-toggle="collapse" data-bs-target="#menuDropdown" aria-controls="menuDropdown"
+							aria-expanded="false" aria-label="Toggle navigation">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+
+						<!-- extra nav -->
+
+						<div class="secondary-menu" style="margin-left:-10px">
+							<li><a href="contact-us.html" class="btn btn-primary shadow">LOGIN <i
+										class="btn-icon-bx fas fa-chevron-right"></i></a></li>
+						</div>
+						<!-- Search Box ==== -->
+						<div class="nav-search-bar">
+							<form action="#">
+								<input name="search" value="" type="text" class="form-control"
+									placeholder="Type to search">
+								<span><i class="ti-search"></i></span>
+							</form>
+							<span id="searchRemove"><i class="ti-close"></i></span>
+						</div>
+						<div class="menu-links navbar-collapse collapse justify-content-end" id="menuDropdown">
+							<div class="menu-logo">
+								<a href="index.html"><img src="images/logo-white.png" alt=""></a>
+							</div>
+							<ul class="nav navbar-nav">
+								<li><a href="/index.html">Home</a></li>
+								<li>
+									<a href="javascript:;">Will Making <i class="fas fa-plus"></i></a>
+									<ul class="sub-menu">
+										<li class="add-menu-left">
+											<ul>
+												<li><a href="Neccessity.html"><span>Make a Will</span></a></li>
+												<li><a href="teamadvisors.html"><span>Our Advisors</span></a></li>
+												<li><a href="teamwitnesses.html"><span>Our Witnesses</span></a></li>
+												<li><a href="create_lastmessage.html"><span>Create Last
+															Message</span></a></li>
+												<!--
                     <li><a href="booking.html"><span>Booking</span></a></li>
                     <li><a href="error-404.html"><span>Error 404</span></a></li>
                     <li><a href="login.html"><span>Login / Register</span></a></li>
                         -->
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a class="active" href="/preplan-intro">Pre-Funeral Planning<i class="fas fa-plus"></i></a>
-                                    <ul class="sub-menu">
-                                        <li class="add-menu-left">
-                                            <ul>
-                                                <li><a href="/start-planning"><span>Start Planning</span></a></li>
-												
-                                                <li><a href="/funeral-packages"><span>View Funeral Packages</span></a></li>
-                                                <li><a href="/prefuneral-plan-controls"><span>View my Plans</span></a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">AMD<i class="fas fa-plus"></i></a>
-                                    <ul class="sub-menu">
-                                        <li class="add-menu-left">
-                                            <ul>
-                                                <li><a href="amd1.html"><span>Make an Advanced Medical Directive</span></a></li>
-                                                <li><a href="teamdoctors.html"><span>Our Doctors</span></a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="javascript:;">Beneficiary<i class="fas fa-plus"></i></a>
-                                    <ul class="sub-menu">
-                                        <li class="add-menu-left">
-                                            <ul>
-                                                <li><a href="benficiary_viewlastmessage.html"><span>View Last Message</span></a></li>
-                                                <li><a href="aboutcounsel.html"><span>Counselling</span></a></li>
-                                                <li><a href="teamcounsellors.html"><span>Our Counsellors</span></a></li>
-                                                <li><a href="viewmyappt.html"><span>View my Appointments</span></a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                
-                                
-                                <div class="menu-close">
-                                    <i class="ti-close"></i>
-                                </div>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a class="active" href="/preplan-intro">Pre-Funeral Planning<i
+											class="fas fa-plus"></i></a>
+									<ul class="sub-menu">
+										<li class="add-menu-left">
+											<ul>
+												<li><a href="/start-planning"><span>Start Planning</span></a></li>
+
+												<li><a href="/funeral-packages"><span>View Funeral Packages</span></a>
+												</li>
+												<li><a href="/prefuneral-plan-controls"><span>View my Plans</span></a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="javascript:;">AMD<i class="fas fa-plus"></i></a>
+									<ul class="sub-menu">
+										<li class="add-menu-left">
+											<ul>
+												<li><a href="amd1.html"><span>Make an Advanced Medical
+															Directive</span></a></li>
+												<li><a href="teamdoctors.html"><span>Our Doctors</span></a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href="javascript:;">Beneficiary<i class="fas fa-plus"></i></a>
+									<ul class="sub-menu">
+										<li class="add-menu-left">
+											<ul>
+												<li><a href="benficiary_viewlastmessage.html"><span>View Last
+															Message</span></a></li>
+												<li><a href="aboutcounsel.html"><span>Counselling</span></a></li>
+												<li><a href="teamcounsellors.html"><span>Our Counsellors</span></a></li>
+												<li><a href="viewmyappt.html"><span>View my Appointments</span></a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+
+
+								<div class="menu-close">
+									<i class="ti-close"></i>
+								</div>
 						</div>
-                        <!-- Navigation Menu END ==== -->
-                    </div>
-                </div>
-            </div>
-            <!-- main header END -->
-        </header>
-        <!-- header END -->
-        
-	<div class="page-content bg-white">
-	
-		<!-- Inner Banner -->
-		<div class="banner-wraper">
-			<div class="page-banner banner-lg contact-banner" style="background-image:url(images/banner/img1.jpg);">
-				<div class="container">
-					<div class="page-banner-entry text-center">
-						<h1>Pre-Funeral Planning</h1>
-						<!-- Breadcrumb row -->
-						<nav aria-label="breadcrumb" class="breadcrumb-row">
-							<ul class="breadcrumb">
-								<li class="breadcrumb-item"><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Home</a></li>
-								<li class="breadcrumb-item active" aria-current="page">Pre-Funeral Planning</li>
-							</ul>
-						</nav>
+						<!-- Navigation Menu END ==== -->
 					</div>
 				</div>
 			</div>
-			<!-- Breadcrumb row END -->
-		</div>
-		<!-- Inner Banner end -->
-			
-		<!-- About us -->
-		<section class="">
-			<div class="container">
-				<div class="contact-wraper">
-					<div class="row">
-						<div class="col-lg-12 mb-30">
-							<form class="form-wraper contact-form ajax-form" action="script/contact.php">
-								<div class="ajax-message"></div>
-								
-								<div class="stepper-wrapper">
-									  <div class="stepper-item completed">
-										<div class="step-counter">1</div>
-										<div class="step-name"><a href="religion.html">Religion</a></div>
-									  </div>
-									  <div class="stepper-item completed">
-										<div class="step-counter">2</div>
-										<div class="step-name"><a href="wake-location.html">Wake <br>Location</a></div>
-									  </div>
-									  <div class="stepper-item completed">
-										<div class="step-counter">3</div>
-										<div class="step-name"><a href="wake-plans.html">Wake <br>Plans</a></div>
-									  </div>
-									  <div class="stepper-item completed">
-										<div class="step-counter">4</div>
-										<div class="step-name"><a href="wake-addons.html">Wake <br>Add-ons</a></div>
-									  </div>
-									  <div class="stepper-item completed">
-										<div class="step-counter">5</div>
-										<div class="step-name"><a href="funeral-plans.html">Funeral <br>Plans</a></div>
-									  </div>
-									  <div class="stepper-item completed">
-										<div class="step-counter">6</div>
-										<div class="step-name"><a href="resting-place.html">Final Resting<br>Place</a></div>
-									  </div>
-									  <div class="stepper-item completed">
-										<div class="step-counter">7</div>
-										<div class="step-name"><a href="plan-executor.html">Plan<br>Executor(s)</a></div>
-									  </div>
-									  <div class="stepper-item active">
-										<div class="step-counter">8</div>
-										<div class="step-name">Confirmation<br>& Payment</div>
-									  </div>
-								</div>
-								
-								<center><h5><u>Review and Confirm</u></h5></center>
-								<div class="row" id="dynamicParent">
-										
-										
+			<!-- main header END -->
+		</header>
+		<!-- header END -->
+
+		<div class="page-content bg-white">
+
+			<!-- Inner Banner -->
+			<div class="banner-wraper">
+				<div class="page-banner banner-lg contact-banner" style="background-image:url(images/banner/img1.jpg);">
+					<div class="container">
+						<div class="page-banner-entry text-center">
+							<h1>Pre-Funeral Planning</h1>
+							<!-- Breadcrumb row -->
+							<nav aria-label="breadcrumb" class="breadcrumb-row">
+								<ul class="breadcrumb">
+									<li class="breadcrumb-item"><a href="index.html"><svg
+												xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+												viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round"
+												class="feather feather-home">
+												<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+												<polyline points="9 22 9 12 15 12 15 22"></polyline>
+											</svg> Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Pre-Funeral Planning</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<!-- Breadcrumb row END -->
+			</div>
+			<!-- Inner Banner end -->
+
+			<!-- About us -->
+			<section class="">
+				<div class="container">
+					<div class="contact-wraper">
+						<div class="row">
+							<div class="col-lg-12 mb-30">
+								<form class="form-wraper contact-form ajax-form" action="script/contact.php">
+									<div class="ajax-message"></div>
+
+									<div class="stepper-wrapper">
+										<div class="stepper-item completed">
+											<div class="step-counter">1</div>
+											<div class="step-name"><a href="religion.html">Religion</a></div>
+										</div>
+										<div class="stepper-item completed">
+											<div class="step-counter">2</div>
+											<div class="step-name"><a href="wake-location.html">Wake <br>Location</a>
+											</div>
+										</div>
+										<div class="stepper-item completed">
+											<div class="step-counter">3</div>
+											<div class="step-name"><a href="wake-plans.html">Wake <br>Plans</a></div>
+										</div>
+										<div class="stepper-item completed">
+											<div class="step-counter">4</div>
+											<div class="step-name"><a href="wake-addons.html">Wake <br>Add-ons</a></div>
+										</div>
+										<div class="stepper-item completed">
+											<div class="step-counter">5</div>
+											<div class="step-name"><a href="funeral-plans.html">Funeral <br>Plans</a>
+											</div>
+										</div>
+										<div class="stepper-item completed">
+											<div class="step-counter">6</div>
+											<div class="step-name"><a href="resting-place.html">Final
+													Resting<br>Place</a></div>
+										</div>
+										<div class="stepper-item completed">
+											<div class="step-counter">7</div>
+											<div class="step-name"><a href="plan-executor.html">Plan<br>Executor(s)</a>
+											</div>
+										</div>
+										<div class="stepper-item active">
+											<div class="step-counter">8</div>
+											<div class="step-name">Confirmation<br>& Payment</div>
+										</div>
+									</div>
+
+									<center>
+										<h5><u>Review and Confirm</u></h5>
+									</center>
+									<div class="row" id="dynamicParent">
+
+
 										<script>
 											function capitalizeFirstLetter(string) {
-											  return string.charAt(0).toUpperCase() + string.slice(1);
+												return string.charAt(0).toUpperCase() + string.slice(1);
 											}
-											
-											function addDynamicItems(mainTitle, arrayStorage, arrayTitles){
+
+											function addDynamicItems(mainTitle, arrayStorage, arrayTitles) {
 												const dynamicParent = document.getElementById("dynamicParent");
 												const h6 = document.createElement("h6");
 												const text = document.createTextNode(mainTitle);
@@ -284,44 +322,43 @@ input[type=checkbox] {
 												dynamicParent.appendChild(h6);
 												// Check and remove if null/undefined
 												var i = arrayStorage.length;
-												while(i--)
-												{
-													if (localStorage.getItem(arrayStorage[i]) == null || localStorage.getItem(arrayStorage[i]) === undefined || localStorage.getItem(arrayStorage[i]) == "") { 
-														arrayStorage.splice(i, 1); 
+												while (i--) {
+													if (localStorage.getItem(arrayStorage[i]) == null || localStorage.getItem(arrayStorage[i]) === undefined || localStorage.getItem(arrayStorage[i]) == "") {
+														arrayStorage.splice(i, 1);
 														arrayTitles.splice(i, 1);
 													}
-													if(i == 0){
+													if (i == 0) {
 														break;
 													}
 												}
-												
+
 												// Retrieve
-												for(i=0; i<arrayStorage.length; i++){
+												for (i = 0; i < arrayStorage.length; i++) {
 													//document.getElementById("result").innerHTML = localStorage.getItem("name");
 													// Column 1
-													if (localStorage.getItem(arrayStorage[i]) != "false"){
+													if (localStorage.getItem(arrayStorage[i]) != "false") {
 														// only print out if not false, reduce visual fatigue.
 														const divTitle = document.createElement("div");
 														divTitle.classList = "col-6";
-														
+
 														const span = document.createElement("span");
 														span.textContent = arrayTitles[i] + ":";
-														
+
 														divTitle.appendChild(span);
 														dynamicParent.appendChild(divTitle);
-														
+
 														// Column 2
 														const divVar = document.createElement("div");
 														divVar.classList = "col-6";
-														
+
 														const spanVar = document.createElement("span");
-														if(localStorage.getItem(arrayStorage[i]) == "true"){
+														if (localStorage.getItem(arrayStorage[i]) == "true") {
 															spanVar.textContent = "Yes";
 														}
 														else {
 															spanVar.textContent = capitalizeFirstLetter(localStorage.getItem(arrayStorage[i]));
 														}
-														
+
 														divVar.appendChild(spanVar);
 														dynamicParent.appendChild(divVar);
 													}
@@ -329,40 +366,43 @@ input[type=checkbox] {
 												const hr = document.createElement("hr");
 												dynamicParent.appendChild(hr);
 											}
-											
-											if (typeof(Storage) !== "undefined") {
+
+											if (typeof (Storage) !== "undefined") {
 												var arrayTitles = ['Religion', 'Require Rites', 'Rite Option', 'Religious Place Name', 'Point of Contact Name', 'Point of Contact Number']
 												var arrayStorage = ['religion', 'requireRites', 'riteType', 'religiousPlaceName', 'ritePOCName', 'ritePOCNumber'];
 												addDynamicItems("Religion", arrayStorage, arrayTitles);
-												
+
 												var arrayTitles1 = ['Location Type', 'Postal Code'];
 												var arrayStorage1 = ['wakeLocationIn', 'wakePostalCode'];
 												addDynamicItems("Location", arrayStorage1, arrayTitles1);
-												
+
 											} else {
 												alert("Sorry, your browser does not support Web Storage...");
 											}
 										</script>
-									<h5><u>Proceed to Payment</u></h5>
-									<div id="smart-button-container" style="border:3px solid black; padding: 0 10% 0 10%">
-										<span style="font-weight: bold;"><center>Pay today and Pay: <u>$2,400</u></center></span>
-										<div style="text-align: center;">
-											<div id="paypal-button-container"></div>
+										<h5><u>Proceed to Payment</u></h5>
+										<div id="smart-button-container"
+											style="border:3px solid black; padding: 0 10% 0 10%">
+											<span style="font-weight: bold;">
+												<center>Pay today and Pay: <u>$2,400</u></center>
+											</span>
+											<div style="text-align: center;">
+												<div id="paypal-button-container"></div>
+											</div>
 										</div>
-									</div>
-									<script>
-										<script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID"> // Replace YOUR_CLIENT_ID with your sandbox client ID
-									</script>
+										<script>
+											<script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID"> // Replace YOUR_CLIENT_ID with your sandbox client ID
+										</script>
 
-									
-									<div id="paypal-button-container"></div>
 
-									<!-- Add the checkout buttons, set up the order and approve the order -->
-									<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=SGD"
-										data-sdk-integration-source="button-factory"></script>
-									<script>
+										<div id="paypal-button-container"></div>
+
+										<!-- Add the checkout buttons, set up the order and approve the order -->
+										<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=SGD"
+											data-sdk-integration-source="button-factory"></script>
+										<script>
 											function initPayPalButton() {
-							  
+
 												paypal.Buttons({
 													style: {
 														shape: 'rect',
@@ -374,7 +414,7 @@ input[type=checkbox] {
 
 													createOrder: function (data, actions) {
 														return actions.order.create({
-															purchase_units: [{ "amount": { "currency_code": "SGD", "value":2400  } }]
+															purchase_units: [{ "amount": { "currency_code": "SGD", "value": 2400 } }]
 														});
 													},
 
@@ -386,139 +426,157 @@ input[type=checkbox] {
 
 													onError: function (err) {
 														console.log(err);
-														
+
 													}
 												}).render('#paypal-button-container');
 										}
 											initPayPalButton();
-									</script>
-									<br>
-									<div class="col-12">
-										<button onclick="location.href = 'funeralplan-complete-futurepay.html';" class="form-control" style="background-color: #565ace; color: white;">Opt-in for Future Payment*</button>
-										<span style="font-weight: bold;">Note:</span> *The prices reflected here is only for current payment and is subjective to inflation changes, at about 1-3% increment annually if you were to opt for future payment.
-									<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Learn more about Future Payment</button>
-									<div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionRow1">
-										<div class="accordion-body">
-											Your concerns, our priority. We understand that most people would not want to dedicate a large sum of money into something that might only happen many years later. Hence, we introduced a way for you to pay only after your passing.<br><br>
-											<h6><u>How does this work?</u></h6>
-											1. You complete your pre-funeral planning and opt for future payment.<br>
-											2. We will send an email to your executors to ensure they know about it.<br>
-											3. Once your executor acknowledged it, we will keep your plan in our database. <br>
-											4. Upon your final breath, your executors will make payment on your behalf and we will execute your plan according to your plans.
+										</script>
+										<br>
+										<div class="col-12">
+											<button onclick="location.href = 'funeralplan-complete-futurepay.html';"
+												class="form-control"
+												style="background-color: #565ace; color: white;">Opt-in for Future
+												Payment*</button>
+											<span style="font-weight: bold;">Note:</span> *The prices reflected here is
+											only for current payment and is subjective to inflation changes, at about
+											1-3% increment annually if you were to opt for future payment.
+											<button class="accordion-button collapsed" type="button"
+												data-bs-toggle="collapse" data-bs-target="#collapse2"
+												aria-expanded="false" aria-controls="collapse2">Learn more about Future
+												Payment</button>
+											<div id="collapse2" class="accordion-collapse collapse"
+												aria-labelledby="heading2" data-bs-parent="#accordionRow1">
+												<div class="accordion-body">
+													Your concerns, our priority. We understand that most people would
+													not want to dedicate a large sum of money into something that might
+													only happen many years later. Hence, we introduced a way for you to
+													pay only after your passing.<br><br>
+													<h6><u>How does this work?</u></h6>
+													1. You complete your pre-funeral planning and opt for future
+													payment.<br>
+													2. We will send an email to your executors to ensure they know about
+													it.<br>
+													3. Once your executor acknowledged it, we will keep your plan in our
+													database. <br>
+													4. Upon your final breath, your executors will make payment on your
+													behalf and we will execute your plan according to your plans.
+												</div>
+											</div>
 										</div>
 									</div>
-									</div>
-								</div>
-							</form>
+								</form>
+							</div>
+
 						</div>
-						
 					</div>
 				</div>
-			</div>
-		</section>
-		
-		
-	</div>
-	
-	<!-- Footer ==== -->
-	<footer class="footer" style="background-image:url(images/background/footer.jpg);">
-		<!-- Footer Top -->
-		<div class="footer-top">
-			<div class="container">
-				<div class="row">
-					<div class="col-xl-3 col-lg-3 col-md-6">
-						<div class="widget widget_info">
-							<div class="footer-logo">
-								<a href="index.html"><img src="images/logo.png" alt=""></a>
-							</div>
-							<div class="ft-contact">
-								<p>Lorem ipsum is dolor sit amet, csectetur adipiscing elit, dolore smod tempor incididunt ut labore et.</p>
-								<div class="contact-bx">
-									<div class="icon"><i class="fas fa-phone-alt"></i></div>
-									<div class="contact-number">
-										<span>Contact Us</span>
-										<h4 class="number">+01 123 456 7890</h4>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-3 col-6">
-						<div class="widget footer_widget ml-50">
-							<h3 class="footer-title">Quick Links</h3>
-							<ul>
-								<li><a href="about-us.html"><span>About Us</span></a></li>
-								<li><a href="services.html"><span>Services</span></a></li>
-								<li><a href="booking.html"><span>Booking</span></a></li>
-								<li><a href="faq.html"><span>Faq's</span></a></li>
-								<li><a href="blog-grid.html"><span>Blogs</span></a></li>
-								<li><a href="team.html"><span>Out Team</span></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-3 col-6">
-						<div class="widget footer_widget">
-							<h3 class="footer-title">Our Service</h3>
-							<ul>
-								<li><a href="service-detail.html"><span>Dental Care</span></a></li>
-								<li><a href="service-detail.html"><span>Cardiac Clinic</span></a></li>
-								<li><a href="service-detail.html"><span>Massege Therapy</span></a></li>
-								<li><a href="service-detail.html"><span>Cardiology</span></a></li>
-								<li><a href="service-detail.html"><span>Precise Diagnosis</span></a></li>
-								<li><a href="service-detail.html"><span>Abmbulance Services</span></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-3 col-md-6">
-                        <div class="widget widget_form">
-                            <h3 class="footer-title">Subcribe</h3>
-							<form class="subscribe-form subscription-form mb-30" action="script/mailchamp.php" method="post">
-								<div class="ajax-message"></div>
-								<div class="input-group">
-									<input name="email" required="required" class="form-control" placeholder="Email Address" type="email">
-								</div>
-								<button name="submit" value="Submit" type="submit" class="btn btn-secondary shadow w-100">Subscribe Now</button>	
-							</form>
-							<div class="footer-social-link">
-								<ul>
-									<li><a target="_blank" href="https://www.facebook.com/"><img src="images/social/facebook.png" alt=""/></a></li>
-									<li><a target="_blank" href="https://twitter.com/"><img src="images/social/twitter.png" alt=""/></a></li>
-									<li><a target="_blank" href="https://www.instagram.com/"><img src="images/social/instagram.png" alt=""/></a></li>
-									<li><a target="_blank" href="https://www.linkedin.com/"><img src="images/social/linkedin.png" alt=""/></a></li>
-								</ul>
-							</div>
-						</div>
+			</section>
+
+
+		</div>
+
+		<!-- Footer ==== -->
+        <footer class="footer" style="background-image:url(images/background/footer.jpg);">
+            <!-- Footer Top -->
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-8">
+                            <div class="widget widget_info">
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="images/logo.png" alt=""></a>
+                                </div>
+                                <div class="ft-contact">
+                                    <p>
+                                        Company registered number:<br />
+                                        100451356
+                                    </p>
+
+                                    <div class="contact-bx">
+                                        <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                                        <div class="contact-number">
+                                            <span>Contact Us</span>
+                                            <h4 class="number">+65 6551 3554</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-8">
+                            <div class="widget footer_widget ml-50">
+                                <h3 class="footer-title">Quick Links</h3>
+                                <ul>
+                                    <li><a href="services.html"><span>FAQ</span></a></li>
+                                    <li><a href="serviceappt.html"><span>Book Appointment</span></a></li>
+                                    <li><a href="team.html"><span>Support</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-8">
+                            <div class="widget footer_widget">
+                                <h3 class="footer-title">Our Team</h3>
+                                <ul>
+                                    <li><a href="teamdoctors.html"><span>Our Doctors</span></a></li>
+                                    <li><a href="teamadvisors.html"><span>Our Will Advisors</span></a></li>
+                                    <li><a href="teamwitnesses.html"><span>Our Witnesses</span></a></li>
+                                    <li><a href="teamcounsellors.html"><span>Our Counsellors</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--
+                        <div class="col-xl-3 col-lg-3 col-md-6">
+                            <div class="widget widget_form">
+                                <h3 class="footer-title">Subcribe</h3>
+                                <form class="subscribe-form subscription-form mb-30" action="script/mailchamp.php" method="post">
+                                    <div class="ajax-message"></div>
+                                    <div class="input-group">
+                                        <input name="email" required="required" class="form-control" placeholder="Email Address" type="email">
+                                    </div>
+                                    <button name="submit" value="Submit" type="submit" class="btn btn-secondary shadow w-100">Subscribe Now</button>
+                                </form>
+                                <div class="footer-social-link">
+                                    <ul>
+                                        <li><a target="_blank" href="https://www.facebook.com/"><img src="images/social/facebook.png" alt=""/></a></li>
+                                        <li><a target="_blank" href="https://twitter.com/"><img src="images/social/twitter.png" alt=""/></a></li>
+                                        <li><a target="_blank" href="https://www.instagram.com/"><img src="images/social/instagram.png" alt=""/></a></li>
+                                        <li><a target="_blank" href="https://www.linkedin.com/"><img src="images/social/linkedin.png" alt=""/></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                            -->
                     </div>
                 </div>
             </div>
-        </div>
-		<!-- footer bottom -->
-		<div class="container">
-			<div class="footer-bottom">
-                <div class="row">
-                    <div class="col-12 text-center">
-						<p class="copyright-text">Copyright © 2021 Design & Developed by <a href="https://themeforest.net/user/themetrades" target="_blank" class="text-secondary">ThemeTrades</a></p>
-					</div>
+            <!-- footer bottom -->
+            <div class="container">
+                <div class="footer-bottom">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <p class="copyright-text">Copyright © 2021 Design & Developed by <a href="" target="_blank" class="text-secondary">Afterlife Caretakers</a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
-		</div>
-		<!-- footer-shape -->
-		<img class="pt-img1 animate-wave" src="images/shap/wave-blue.png" alt="">
-		<img class="pt-img2 animate1" src="images/shap/circle-dots.png" alt="">
-		<img class="pt-img3 animate-rotate" src="images/shap/plus-blue.png" alt="">
-		<img class="pt-img4 animate-wave" src="images/shap/wave-blue.png" alt="">
-	</footer>
-    <!-- Footer END ==== -->
-	<button class="back-to-top fa fa-chevron-up"></button>
-</div>
-<!-- JAVASCRIPT FILES ========================================= -->
-<script src="js/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
-<script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
-<script src="vendor/swiper/swiper.min.js"></script>
-<script src="https://www.google.com/recaptcha/api.js"></script>
-<script src="js/functions.js"></script>
-<script src="js/contact.js"></script>
+            <!-- footer-shape -->
+            <img class="pt-img1 animate-wave" src="images/shap/wave-blue.png" alt="">
+            <img class="pt-img2 animate1" src="images/shap/circle-dots.png" alt="">
+            <img class="pt-img3 animate-rotate" src="images/shap/plus-blue.png" alt="">
+            <img class="pt-img4 animate-wave" src="images/shap/wave-blue.png" alt="">
+        </footer>
+        <!-- Footer END ==== -->
+		<button class="back-to-top fa fa-chevron-up"></button>
+	</div>
+	<!-- JAVASCRIPT FILES ========================================= -->
+	<script src="js/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="vendor/bootstrap-select/js/bootstrap-select.min.js"></script>
+	<script src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
+	<script src="vendor/swiper/swiper.min.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+	<script src="js/functions.js"></script>
+	<script src="js/contact.js"></script>
 </body>
+
 </html>
