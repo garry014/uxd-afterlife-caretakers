@@ -401,7 +401,7 @@
                                                 if (typeof (Storage) !== "undefined") {
                                                     localStorage.setItem("wakeLocationIn", document.querySelector('input[name="test"]:checked').value);
                                                     localStorage.setItem("wakePostalCode", document.getElementById("postalcode").value);
-                                                    location.href = 'wake-plans.html';
+                                                    location.href = 'wake-plansum.html';
                                                 }
                                                 else {
                                                     alert("Sorry, your browser does not support Web Storage, hence there will be limited features.");
@@ -447,7 +447,7 @@
                                             <div class="col-6">
                                                 <div class="form-group" align="right">
                                                     <button name="back" type="back" value="Back" class="btn btn-secondary" style="background-color: #e0ded7; color: black" onclick="location.href = 'religionsum.html';">Previous</button>                                                <a href="/homepage.html">
-                                                        <a href="wake-plansum.html"><button name="submit" type="submit" value="Submit" class="btn btn-secondary">Next</button></a>
+                                                        <a href="wake-plansum.html"><button class="btn btn-secondary">Next</button></a>
                                                 </div>
                                             </div>
                                         </div>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -60,23 +60,14 @@
         </div>
 
         <!-- header -->
-        <header class="header header-transparent rs-nav">
-            <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PJ8SXHQXC5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PJ8SXHQXC5');
-</script>
+        <header class="header rs-nav">
             <!-- main header -->
             <div class="sticky-header navbar-expand-lg">
                 <div class="menu-bar clearfix">
                     <div class="container-fluid clearfix">
                         <!-- website logo -->
                         <div class="menu-logo logo-dark">
-                            <a href="/index.html"><img src="images/logo.png" alt=""></a>
+                            <a href="index.html"><img src="images/logo.png" alt=""></a>
                         </div>
                         <!-- nav toggle button -->
                         <button class="navbar-toggler collapsed menuicon justify-content-end" type="button" data-bs-toggle="collapse" data-bs-target="#menuDropdown" aria-controls="menuDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,12 +75,12 @@
                             <span></span>
                             <span></span>
                         </button>
-
                         <!-- extra nav -->
-
-                        <div class="secondary-menu" style="margin-left:-10px">
+                        <div class="secondary-menu">
                             <ul>
-                                <li><a href="contact-us.html" class="btn btn-primary shadow">LOGIN  <i class="btn-icon-bx fas fa-chevron-right"></i></a></li>
+                                <li class="search-btn"><button id="quikSearchBtn" type="button" class="btn-link"><i class="las la-search"></i></button></li>
+                                <li class="num-bx"><a href="tel:(+01)999888777"><i class="fas fa-phone-alt"></i> (+01) 999 888 777</a></li>
+                                <li class="btn-area"><a href="contact-us.html" class="btn btn-primary shadow">CONTACT US <i class="btn-icon-bx fas fa-chevron-right"></i></a></li>
                             </ul>
                         </div>
                         <!-- Search Box ==== -->
@@ -105,58 +96,47 @@
                                 <a href="index.html"><img src="images/logo-white.png" alt=""></a>
                             </div>
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="/index.html">Home</a></li>
-                                <li>
-                                    <a href="javascript:;">Will Making <i class="fas fa-plus"></i></a>
+                                <li><a href="index.html">Home</a></li>
+                                <li class="active">
+                                    <a href="javascript:;">Pages <i class="fas fa-plus"></i></a>
                                     <ul class="sub-menu">
                                         <li class="add-menu-left">
                                             <ul>
-                                                <li><a href="about-us.html"><span>Make a Will</span></a></li>
-                                                <li><a href="teamadvisors.html"><span>Our Advisors</span></a></li>
-                                                <li><a href="teamwitnesses.html"><span>Our Witnesses</span></a></li>
-                                                <li><a href="create_lastmessage.html"><span>Create Last Message</span></a></li>
-
+                                                <li><a href="about-us.html"><span>About Us</span></a></li>
+                                                <li><a href="team.html"><span>Our Team</span></a></li>
+                                                <li><a href="faq.html"><span>FAQ's</span></a></li>
+                                                <li><a href="booking.html"><span>Booking</span></a></li>
+                                                <li><a href="error-404.html"><span>Error 404</span></a></li>
+                                                <li><a href="login.html"><span>Login / Register</span></a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="javascript:;">Pre-Funeral Planning<i class="fas fa-plus"></i></a>
+                                    <a href="javascript:;">Services <i class="fas fa-plus"></i></a>
                                     <ul class="sub-menu">
                                         <li class="add-menu-left">
                                             <ul>
-                                                <li><a href="/start-planning"><span>Customize</span></a></li>
-
-                                                <li><a href="/funeral-packages"><span>Funeral Package</span></a></li>
-                                                <li><a href="/view-prefuneralplans"><span>View my Plans</span></a></li>
+                                                <li><a href="services.html"><span>Service</span> </a></li>
+                                                <li><a href="service-detail.html"><span>Service Detail</span></a></li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="javascript:;">AMD<i class="fas fa-plus"></i></a>
-                                    <ul class="sub-menu">
-                                        <li class="add-menu-left">
-                                            <ul>
-                                                <li><a href="about-us.html"><span>Make an Advanced Medical Directive</span></a></li>
-                                                <li><a href="teamdoctors.html"><span>Our Doctors</span></a></li>
-                                            </ul>
-                                        </li>
+                                    <a href="javascript:;">Blog <i class="fas fa-plus"></i></a>
+                                    <ul class="sub-menu left">
+                                        <li><a href="blog-grid.html"><span>Blogs</span></a></li>
+                                        <li><a href="blog-details.html"><span>Blog Details</span></a></li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <a href="javascript:;">Beneficiary<i class="fas fa-plus"></i></a>
-                                    <ul class="sub-menu">
-                                        <li class="add-menu-left">
-                                            <ul>
-                                                <li><a href="about-us.html"><span>View Last Message</span></a></li>
-                                                <li><a href="aboutcounsel.html"><span>Counselling</span></a></li>
-                                                <li><a href="teamcounsellors.html"><span>Our Counsellors</span></a></li>
-                                                <li><a href="viewmyappt.html"><span>View my Appointments</span></a></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
+                                <li><a href="contact-us.html">Contact Us</a></li>
+                            </ul>
+                            <ul class="social-media">
+                                <li><a target="_blank" href="https://www.facebook.com/" class="btn btn-primary"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a target="_blank" href="https://www.google.com/" class="btn btn-primary"><i class="fab fa-google"></i></a></li>
+                                <li><a target="_blank" href="https://www.linkedin.com/" class="btn btn-primary"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a target="_blank" href="https://twitter.com/" class="btn btn-primary"><i class="fab fa-twitter"></i></a></li>
                             </ul>
                             <div class="menu-close">
                                 <i class="ti-close"></i>
@@ -177,17 +157,12 @@
                 <div class="page-banner" style="background-image:url(images/banner/img1.jpg);">
                     <div class="container">
                         <div class="page-banner-entry text-center">
-                            <br/>
-                            <br/>
-                            <br/>
-                           <h2>LAST MESSAGE CREATED SUCCESSFULLY! </h2>
-                            <h5>Your last message has been created successfully and will be released at the appropriate time to your loved ones. Thank you for using our services.Please proceed to make payment now with your will. Thank You! </h5>
+                          <h3>PAYMENT COMPLETED SUCCESSFULLY!</h3>
+                            <h5>Payment has been made successfully. Our personnel will contact you shortly to execute the plans.</h5>
                             <!-- Breadcrumb row -->
                             <div class="form-group">
-                                <button class="btn btn-outline-secondary">Make Payment</button>
-                                <a href="index.html"><button class="btn btn-outline-primary">Back to Home</button></a>
+                                <button class="btn btn-primary">Back to Home Page</button>
 
-                            </div>
                             </div>
 
 
@@ -204,55 +179,76 @@
 
 
         </div>
+
         <!-- Footer ==== -->
         <footer class="footer" style="background-image:url(images/background/footer.jpg);">
             <!-- Footer Top -->
             <div class="footer-top">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-4 col-lg-4 col-md-8">
+                        <div class="col-xl-3 col-lg-3 col-md-6">
                             <div class="widget widget_info">
                                 <div class="footer-logo">
                                     <a href="index.html"><img src="images/logo.png" alt=""></a>
                                 </div>
                                 <div class="ft-contact">
-                                    <p>
-                                        Company registered number:<br />
-                                        100451356
-                                    </p>
-
+                                    <p>Lorem ipsum is dolor sit amet, csectetur adipiscing elit, dolore smod tempor incididunt ut labore et.</p>
                                     <div class="contact-bx">
                                         <div class="icon"><i class="fas fa-phone-alt"></i></div>
                                         <div class="contact-number">
                                             <span>Contact Us</span>
-                                            <h4 class="number">+65 6551 3554</h4>
+                                            <h4 class="number">+01 123 456 7890</h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-8">
+                        <div class="col-xl-3 col-lg-3 col-6">
                             <div class="widget footer_widget ml-50">
                                 <h3 class="footer-title">Quick Links</h3>
                                 <ul>
-                                    <li><a href="#.html"><span>FAQ</span></a></li>
-                                    <li><a href="serviceappt.html"><span>Book Appointment</span></a></li>
-                                    <li><a href="#.html"><span>Support</span></a></li>
+                                    <li><a href="about-us.html"><span>About Us</span></a></li>
+                                    <li><a href="services.html"><span>Services</span></a></li>
+                                    <li><a href="booking.html"><span>Booking</span></a></li>
+                                    <li><a href="faq.html"><span>Faq's</span></a></li>
+                                    <li><a href="blog-grid.html"><span>Blogs</span></a></li>
+                                    <li><a href="team.html"><span>Out Team</span></a></li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-8">
+                        <div class="col-xl-3 col-lg-3 col-6">
                             <div class="widget footer_widget">
-                                <h3 class="footer-title">Our Team</h3>
+                                <h3 class="footer-title">Our Service</h3>
                                 <ul>
-                                    <li><a href="teamdoctors.html"><span>Our Doctors</span></a></li>
-                                    <li><a href="teamadvisors.html"><span>Our Will Advisors</span></a></li>
-                                    <li><a href="teamwitnesses.html"><span>Our Witnesses</span></a></li>
-                                    <li><a href="teamcounsellors.html"><span>Our Counsellors</span></a></li>
+                                    <li><a href="service-detail.html"><span>Dental Care</span></a></li>
+                                    <li><a href="service-detail.html"><span>Cardiac Clinic</span></a></li>
+                                    <li><a href="service-detail.html"><span>Massege Therapy</span></a></li>
+                                    <li><a href="service-detail.html"><span>Cardiology</span></a></li>
+                                    <li><a href="service-detail.html"><span>Precise Diagnosis</span></a></li>
+                                    <li><a href="service-detail.html"><span>Abmbulance Services</span></a></li>
                                 </ul>
                             </div>
                         </div>
-
+                        <div class="col-xl-3 col-lg-3 col-md-6">
+                            <div class="widget widget_form">
+                                <h3 class="footer-title">Subcribe</h3>
+                                <form class="subscribe-form subscription-form mb-30" action="script/mailchamp.php" method="post">
+                                    <div class="ajax-message"></div>
+                                    <div class="input-group">
+                                        <input name="email" required="required" class="form-control" placeholder="Email Address" type="email">
+                                    </div>
+                                    <button name="submit" value="Submit" type="submit" class="btn btn-secondary shadow w-100">Subscribe Now</button>
+                                </form>
+                                <div class="footer-social-link">
+                                    <ul>
+                                        <li><a target="_blank" href="https://www.facebook.com/"><img src="images/social/facebook.png" alt="" /></a></li>
+                                        <li><a target="_blank" href="https://twitter.com/"><img src="images/social/twitter.png" alt="" /></a></li>
+                                        <li><a target="_blank" href="https://www.instagram.com/"><img src="images/social/instagram.png" alt="" /></a></li>
+                                        <li><a target="_blank" href="https://www.linkedin.com/"><img src="images/social/linkedin.png" alt="" /></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -261,7 +257,7 @@
                 <div class="footer-bottom">
                     <div class="row">
                         <div class="col-12 text-center">
-                            <p class="copyright-text">Copyright ©️ 2021 Design & Developed by <a href="https://themeforest.net/user/themetrades" target="_blank" class="text-secondary">ThemeTrades</a></p>
+                            <p class="copyright-text">Copyright � 2021 Design & Developed by <a href="https://themeforest.net/user/themetrades" target="_blank" class="text-secondary">ThemeTrades</a></p>
                         </div>
                     </div>
                 </div>
@@ -272,7 +268,7 @@
             <img class="pt-img3 animate-rotate" src="images/shap/plus-blue.png" alt="">
             <img class="pt-img4 animate-wave" src="images/shap/wave-blue.png" alt="">
         </footer>
-
+        <!-- Footer END ==== -->
         <button class="back-to-top fa fa-chevron-up"></button>
     </div>
     <!-- JAVASCRIPT FILES ========================================= -->
