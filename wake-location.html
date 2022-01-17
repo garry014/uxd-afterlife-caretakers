@@ -372,7 +372,7 @@
 
 										<div class="form-group col-md-3" id="others">
 											<span style="font-weight:bold">Postal Code:*</span>
-											<input name="postalcode" type="number" id="postalcode" required
+											<input name="postalcode" id="postalcode" required
 												class="form-control" maxlength="6" onchange="findLocation();">
 											<span id="googleValidator" class="text-danger" style="display: none;">Please
 												enter a valid postal code.</span>
@@ -394,9 +394,9 @@
 											<!-- Intentionally left blank -->
 										</div>
 
-										<div class="form-group col-md-8" id="others2">
-											<span style="font-weight:bold">Address:</span>
-											<input type="text" id="address" required class="form-control" readonly>
+										<div class="form-group col-md-8" id="others2" style="display:none;">
+											Please check if the above entered postal code reflects the desired address
+											<input type="text" id="address" required class="form-control" style="background-color:#e0ded7" readonly>
 										</div>
 
 										<script src="./js/setvars.js"></script>
@@ -439,6 +439,7 @@
 															$.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lng + "&sensor=false&key=AIzaSyBO0MrrmlS2Fyp_DWfjlPy_ymuZCHiCqYY", function (addressData) {
 																//console.log(addressData.results[0].formatted_address);
 																document.getElementById('address').value = addressData.results[0].formatted_address;
+																document.getElementById('others2').style.display = "block";
 															});
 														}
 														else if (data.status == "ZERO_RESULTS") {
@@ -458,8 +459,9 @@
 														console.log(position);
 														$.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude + "&sensor=false&key=AIzaSyBO0MrrmlS2Fyp_DWfjlPy_ymuZCHiCqYY", function (addressData) {
 															document.getElementById('postalcode').value = addressData.results[1].address_components[5].long_name;
-															//console.log(addressData.results[0].address_components[5].long_name);
+															console.log(addressData.results[1].address_components[5].long_name);
 															document.getElementById('address').value = addressData.results[0].formatted_address;
+															document.getElementById('others2').style.display = "block";
 														});
 													});
 												}
